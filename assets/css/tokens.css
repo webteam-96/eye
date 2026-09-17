@@ -1,0 +1,60 @@
+/* Tokens — the Medic 128 system (measured), recoloured from the Netram logo.
+   Medic teal → olive, Medic navy → near-black, Medic pink → amber, pink wash → paper. */
+:root {
+  /* colour */
+  --ink: #383434;                 /* headings, footer ground  (Medic #223645) */
+  --grey: #707070;                /* paragraphs               (Medic #707070) */
+  --link: #222222;                /* nav links                (Medic #222222) */
+  --olive: #5E6A42;               /* brand                    (Medic teal #36807F) */
+  --olive-tint: rgba(94, 106, 66, .2);
+  --olive-light: #EEF4F8;         /* button hover text on olive (Medic #EEF4F8) */
+  --moss: #3C4632;                /* deep block               (Medic #083A3A) */
+  --amber: #D99A2B;
+  --amber-text: #8A5F14;               /* accent stroke / block    (Medic pink #E61F57) — never white text on it */
+  --paper: #F6F4EC;               /* wash blob                (Medic pink wash) */
+  --white: #FFFFFF;
+  --line-nav: rgba(0, 0, 0, .2);
+  --line-row: rgba(56, 52, 52, .2);
+  --line-input: #CCCCCC;
+  --line-card: rgba(0, 0, 0, .1);
+
+  /* type */
+  --font: "Poppins", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --deva: "Noto Sans Devanagari", "Nirmala UI", "Kohinoor Devanagari", sans-serif;
+  --h1: 76px; --h1-lh: 91.2px;
+  --h2: 46px; --h2-lh: 59.8px;
+  --h3: 24px; --h3-lh: 28.8px;
+  --h3-lg: 26px; --h3-lg-lh: 31.2px;
+  --num: 40px; --num-lh: 52px;
+  --p: 16px; --p-lh: 24px;
+  --nav: 18px;
+  --btn: 18px;
+  --eyebrow: 14px;
+  --small: 14px;
+
+  /* layout */
+  --container: 1200px;
+  --gutter: 15px;
+  --sec: 120px;                   /* section padding-bottom */
+  --sec-band-top: 120px; --sec-band-bottom: 200px;
+  --footer-top: 80px; --footer-bottom: 40px;
+  --hero-top: 40px;
+
+  /* radii */
+  --r-card: 10px; --r-block: 20px; --r-btn: 50px; --r-row: 80px;
+
+  /* shadows — Medic has three */
+  --sh-card: 0 0 20px -1px rgba(0, 0, 0, .1);
+  --sh-float: 0 20px 40px rgba(0, 0, 0, .1);
+  --sh-btn: 0 5px 30px rgba(94, 106, 66, .3);
+
+  /* motion — Save a Child's Heart recipes */
+  --ease-sach: cubic-bezier(0, 0, 0, 1);       /* their (0,.003,0,1.003): instant start, long settle */
+  --ease-out: cubic-bezier(.25, 1, .5, 1);     /* outQuart */
+  --ease-outsine: cubic-bezier(.61, 1, .88, 1);
+  --rv-move: 1200ms; --rv-fade: 1000ms;
+  --ui: 300ms;
+}
+@media (max-width: 991px) {
+  :root { --h1: 50px; --h1-lh: 60px; --h2: 40px; --h2-lh: 52px; --sec: 60px; --sec-band-top: 60px; --sec-band-bottom: 130px; --footer-top: 60px; }
+}

@@ -1,0 +1,5 @@
+/* 404 — Medic 128 banner only */
+.banner { padding-bottom: var(--sec); min-height: 60vh; }
+.cta-row--centre { justify-content: center; margin-top: 30px; }
+.ekg--404 { max-width: 700px; margin: 60px auto 0; }
+.ekg--404 path { stroke: var(--amber); stroke-width: 3; }

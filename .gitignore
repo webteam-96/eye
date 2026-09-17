@@ -1,0 +1,7 @@
+originals/
+references/
+.webcheck/
+.playwright-cli/
+*.pdf
+Thumbs.db
+.DS_Store

@@ -1,0 +1,311 @@
+{
+ "hero": {
+  "widths": [
+   480,
+   800,
+   1000,
+   1200
+  ],
+  "aspect": 0.8,
+  "src_w": 1361,
+  "tier": "A"
+ },
+ "hero-square": {
+  "widths": [
+   480,
+   720
+  ],
+  "aspect": 1,
+  "src_w": 1361,
+  "tier": "A"
+ },
+ "about-hero": {
+  "widths": [
+   480,
+   800
+  ],
+  "aspect": 1.5,
+  "src_w": 1011,
+  "tier": "A"
+ },
+ "office": {
+  "widths": [
+   480,
+   800
+  ],
+  "aspect": 1.5,
+  "src_w": 869,
+  "tier": "A"
+ },
+ "desk": {
+  "widths": [
+   480
+  ],
+  "aspect": 0.8,
+  "src_w": 586,
+  "tier": "A"
+ },
+ "facade": {
+  "widths": [
+   480,
+   800
+  ],
+  "aspect": 0.8,
+  "src_w": 893,
+  "tier": "A"
+ },
+ "tedx-portrait": {
+  "widths": [
+   480
+  ],
+  "aspect": 1.5,
+  "src_w": 607,
+  "tier": "A"
+ },
+ "hsbc": {
+  "widths": [
+   480,
+   700
+  ],
+  "aspect": 0.8,
+  "src_w": 717,
+  "tier": "A"
+ },
+ "conference": {
+  "widths": [
+   480,
+   800,
+   1000
+  ],
+  "aspect": 0.8,
+  "src_w": 1059,
+  "tier": "A"
+ },
+ "cii": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "aspect": 1.5,
+  "src_w": 1200,
+  "tier": "B"
+ },
+ "ipcl": {
+  "widths": [
+   480,
+   760
+  ],
+  "aspect": 1.5,
+  "src_w": 768,
+  "tier": "B"
+ },
+ "tedx-stage": {
+  "widths": [
+   480,
+   800,
+   1000
+  ],
+  "aspect": 1.5,
+  "src_w": 1032,
+  "tier": "B"
+ },
+ "dos-podium": {
+  "widths": [
+   480,
+   800,
+   1000
+  ],
+  "aspect": 0.8,
+  "src_w": 1078,
+  "tier": "B"
+ },
+ "dos-2023": {
+  "widths": [
+   480,
+   600
+  ],
+  "aspect": 0.8,
+  "src_w": 606,
+  "tier": "B"
+ },
+ "iirsi": {
+  "widths": [
+   480,
+   800
+  ],
+  "aspect": 2,
+  "src_w": 1079,
+  "tier": "B"
+ },
+ "hoa": {
+  "widths": [
+   480,
+   800
+  ],
+  "aspect": 2,
+  "src_w": 976,
+  "tier": "B"
+ },
+ "voh-stage": {
+  "widths": [
+   480,
+   800,
+   1080
+  ],
+  "aspect": 2,
+  "src_w": 1080,
+  "tier": "B"
+ },
+ "eye-institute": {
+  "widths": [
+   480,
+   800,
+   1080
+  ],
+  "aspect": 1.5,
+  "src_w": 1080,
+  "tier": "B"
+ },
+ "bw40": {
+  "widths": [
+   480
+  ],
+  "aspect": 0.8,
+  "src_w": 697,
+  "tier": "B"
+ },
+ "youth-india": {
+  "widths": [
+   480
+  ],
+  "aspect": 1.5,
+  "src_w": 659,
+  "tier": "B"
+ },
+ "gandhi-samman": {
+  "widths": [
+   480,
+   800
+  ],
+  "aspect": 1.5,
+  "src_w": 852,
+  "tier": "B"
+ },
+ "csr-2019": {
+  "widths": [
+   480
+  ],
+  "aspect": 1.5,
+  "src_w": 733,
+  "tier": "B"
+ },
+ "roshini": {
+  "widths": [
+   480,
+   800
+  ],
+  "aspect": 1.5,
+  "src_w": 837,
+  "tier": "A"
+ },
+ "roshini-school": {
+  "widths": [
+   800,
+   1200,
+   1440
+  ],
+  "aspect": 2,
+  "src_w": 1440,
+  "tier": "B"
+ },
+ "chashma-bus": {
+  "widths": [
+   464
+  ],
+  "aspect": 1.5,
+  "src_w": 464,
+  "tier": "A"
+ },
+ "eye-mela": {
+  "widths": [
+   480
+  ],
+  "aspect": 1.5,
+  "src_w": 744,
+  "tier": "B"
+ },
+ "eye-mela-b": {
+  "widths": [
+   480,
+   740
+  ],
+  "aspect": 1.5,
+  "src_w": 742,
+  "tier": "B"
+ },
+ "nayan-hans": {
+  "widths": [
+   480
+  ],
+  "aspect": 1.5,
+  "src_w": 762,
+  "tier": "B"
+ },
+ "nayan-hans-b": {
+  "widths": [
+   480
+  ],
+  "aspect": 1.5,
+  "src_w": 723,
+  "tier": "B"
+ },
+ "transgender": {
+  "widths": [
+   480
+  ],
+  "aspect": 1.5,
+  "src_w": 788,
+  "tier": "A"
+ },
+ "mission66": {
+  "widths": [
+   480
+  ],
+  "aspect": 1.5,
+  "src_w": 749,
+  "tier": "B"
+ },
+ "mission66-b": {
+  "widths": [
+   480
+  ],
+  "aspect": 1.5,
+  "src_w": 556,
+  "tier": "B"
+ },
+ "iam66": {
+  "widths": [
+   480
+  ],
+  "aspect": 1,
+  "src_w": 500,
+  "tier": "A"
+ },
+ "oxygen": {
+  "widths": [
+   408
+  ],
+  "aspect": 1,
+  "src_w": 408,
+  "tier": "B"
+ },
+ "oxygen-b": {
+  "widths": [
+   450
+  ],
+  "aspect": 1.5,
+  "src_w": 454,
+  "tier": "B"
+ }
+}
