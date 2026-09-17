@@ -344,9 +344,9 @@ textarea.input { height: 120px; max-width: none; resize: vertical; }
 .footer__brand { flex: 0 0 326px; }
 .footer__brand svg { height: 48px; width: auto; }
 .footer__brand p { color: var(--white); margin: 20px 0 30px; max-width: 300px; }
-.footer__social { display: flex; gap: 30px; }
-.footer__social a { display: block; width: 24px; height: 24px; color: var(--white); }
-.footer__social a:hover { color: var(--olive-light); opacity: .8; }
+.footer__social { display: flex; gap: 14px; }
+.footer__social a { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, .25); color: var(--white); transition: background var(--ui) ease, border-color var(--ui) ease, transform var(--ui) ease; }
+.footer__social a:hover { background: var(--olive); border-color: var(--olive); transform: translateY(-3px); }
 .footer__social svg { width: 18px; height: 18px; fill: currentColor; }
 .footer__cols { flex: 1 1 auto; display: flex; }
 .footer__col { flex: 1 1 0; }
