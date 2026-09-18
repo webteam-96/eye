@@ -197,6 +197,7 @@
 
 /* ---------- Band + slider (testimonials) ---------- */
 .band { position: relative; overflow: hidden; }
+.band > .container { position: relative; z-index: 1; }
 .band__photo { position: absolute; inset: 0; pointer-events: none; }
 .band__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; opacity: .22; filter: grayscale(1); }
 .band__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, var(--rose) 0%, rgba(214, 36, 110, .55) 50%, var(--rose) 100%); }
