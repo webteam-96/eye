@@ -507,6 +507,8 @@ p a, li a { padding-block: 4px; }
 .banner__photo--21 { aspect-ratio: 2 / 1; }
 .frame--45 { aspect-ratio: 4 / 5 !important; }
 .dept__img--sq img { object-fit: contain; background: var(--paper); }
+.dept__img--fit { background: var(--plum); }
+.dept__img--fit img { object-fit: contain; }
 .consult__lead { margin: -8px 0 22px; }
 
 /* Tablet landscape / small laptop (992–1199): the desktop layout with fluid columns instead of Medic's fixed pixel widths */
