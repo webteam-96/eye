@@ -2,6 +2,13 @@
 
 Running log: decisions made, things tried and rejected, and what the client still owes. Passes 1 and 2 are the rejected first direction and are kept as history; Pass 3 is the build that ships.
 
+## Pass 7 — colour change and Home reorder (18 Sep 2026)
+
+- Client: "don't like the green colour… use some vibrant, happy colour, the pink or the saree colour in the photo." Sampled from `WhatsApp Image 2026-09-17 at 7.04.15 PM.jpeg`: carnation pink and saree gold. Tokens renamed and revalued: `--rose #D6246E` (4.8:1 on white, so white text on rose buttons and rose text on white both pass AA), `--rose-tint`, `--rose-light #FFF0F6`, `--plum #7A1F4C` (deep blocks, 9.9:1), `--amber #D4912E` (saree gold, ink text only), `--paper #FDF3F7` blush wash. The Netram logo mark and favicon are recoloured to rose (the official mark is olive; revert `tools/inject-svg.py` and the three SVGs if the Foundation needs its own colour kept).
+- Home order is now: hero, training, press, Netram row, impact, trust, What I treat, every eye condition, Recognition, social work (Netram / Eye Maitri / Foundation blocks), consultation. The Recognition band shows three award photographs (TEDx stage, IPCL Gold Medal, CII panel) in tilted white frames beside the slider instead of the India map; TEDx, CII, BW and Gold Medal slides carry photo avatars.
+- "What I treat" tiles and the Expertise cards use six different photographs each; the two WhatsApp desk portraits (gold saree with flowers, hands folded) are in.
+- Scratchpad helpers from 17 Sep were purged overnight: the built pages are the source now; `cap.js` recreated. Shared parts (head, navbar, footer) are edited across all six files with a script.
+
 ## Pass 6 — review round 2 (17 Sep 2026)
 
 - Home hero uses the client's `_B7A3728.JPG` (landscape, at Netram in front of the I Am 6/6 mural): the arch became a wide 3:2 arch (`.hero__arch--wide`, full width on phones) instead of cropping the frame tall. Expertise hero uses `_B7A1069.JPG` (navy scrubs). Both go through `tools/prepare-drive.py`.

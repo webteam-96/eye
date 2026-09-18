@@ -1,17 +1,17 @@
 /* Tokens — the Medic 128 system (measured), recoloured from the Netram logo.
-   Medic teal → olive, Medic navy → near-black, Medic pink → amber, pink wash → paper. */
+   Medic teal → rose (client's carnation pink, 18 Sep 2026), Medic navy → near-black, Medic pink → saree gold, pink wash → blush. */
 :root {
   /* colour */
   --ink: #383434;                 /* headings, footer ground  (Medic #223645) */
   --grey: #707070;                /* paragraphs               (Medic #707070) */
   --link: #222222;                /* nav links                (Medic #222222) */
-  --olive: #5E6A42;               /* brand                    (Medic teal #36807F) */
-  --olive-tint: rgba(94, 106, 66, .2);
-  --olive-light: #EEF4F8;         /* button hover text on olive (Medic #EEF4F8) */
-  --moss: #3C4632;                /* deep block               (Medic #083A3A) */
-  --amber: #D99A2B;
-  --amber-text: #8A5F14;               /* accent stroke / block    (Medic pink #E61F57) — never white text on it */
-  --paper: #F6F4EC;               /* wash blob                (Medic pink wash) */
+  --rose: #D6246E;                 /* brand: the carnation pink from the client's photo (Medic teal #36807F); 4.8:1 on white */
+  --rose-tint: rgba(214, 36, 110, .14);
+  --rose-light: #FFF0F6;           /* button hover text on rose */
+  --plum: #7A1F4C;                 /* deep block               (Medic #083A3A) */
+  --amber: #D4912E;                /* the saree gold; ink text only (5.0:1), never white text on it */
+  --amber-text: #8A5F14;
+  --paper: #FDF3F7;               /* blush wash               (Medic pink wash) */
   --white: #FFFFFF;
   --line-nav: rgba(0, 0, 0, .2);
   --line-row: rgba(56, 52, 52, .2);
@@ -46,7 +46,7 @@
   /* shadows — Medic has three */
   --sh-card: 0 0 20px -1px rgba(0, 0, 0, .1);
   --sh-float: 0 20px 40px rgba(0, 0, 0, .1);
-  --sh-btn: 0 5px 30px rgba(94, 106, 66, .3);
+  --sh-btn: 0 5px 30px rgba(214, 36, 110, .3);
 
   /* motion — Save a Child's Heart recipes */
   --ease-sach: cubic-bezier(0, 0, 0, 1);       /* their (0,.003,0,1.003): instant start, long settle */

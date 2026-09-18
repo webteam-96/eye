@@ -14,7 +14,7 @@
 .band-row__text > p { opacity: .9; }
 .band .acc-btn { background: transparent; border-color: rgba(255, 255, 255, .5); color: var(--white); }
 .band .acc-btn:hover { color: var(--white); border-color: var(--white); }
-.band .acc-num { background: var(--white); color: var(--olive); }
+.band .acc-num { background: var(--white); color: var(--rose); }
 .band .acc-chev { background: rgba(255, 255, 255, .2); }
 .band .acc-chev::after { border-color: var(--white); }
 .band .acc-panel > div { background: rgba(255, 255, 255, .08); border-color: transparent; }
@@ -50,10 +50,10 @@
 .reach__text { flex: 0 0 585px; max-width: 585px; }
 .reach__stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 26px; }
 .reach__stat { background: var(--white); border-radius: var(--r-card); box-shadow: var(--sh-card); padding: 18px 16px; text-align: center; display: grid; gap: 4px; }
-.reach__stat .num { font-size: 32px; line-height: 38px; font-weight: 700; color: var(--olive); }
+.reach__stat .num { font-size: 32px; line-height: 38px; font-weight: 700; color: var(--rose); }
 .reach__stat span:last-child { font-size: 13px; line-height: 18px; color: var(--grey); }
 .reach__chips { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.reach__chips li { padding: 6px 12px; border-radius: 20px; background: var(--white); border: 1px solid var(--olive-tint); font-size: 13px; line-height: 18px; font-weight: 500; color: var(--ink); }
+.reach__chips li { padding: 6px 12px; border-radius: 20px; background: var(--white); border: 1px solid var(--rose-tint); font-size: 13px; line-height: 18px; font-weight: 500; color: var(--ink); }
 .reach .mapwrap { flex: 1 1 auto; max-width: 480px; }
 @media (max-width: 991px) {
   .reach { flex-direction: column; gap: 30px; }
@@ -64,7 +64,7 @@
 }
 
 /* Qualifications: Save a Child's Heart 'How your donation saves hearts' zig-zag with EKG lines */
-.quals { background: var(--moss); color: var(--white); padding: var(--sec) 0 60px; overflow: hidden; }
+.quals { background: var(--plum); color: var(--white); padding: var(--sec) 0 60px; overflow: hidden; }
 .quals__title { text-align: center; color: var(--amber); text-transform: uppercase; letter-spacing: .5px; font-size: 40px; line-height: 48px; margin: 0 0 30px; }
 .quals__list { list-style: none; margin: 0; padding: 0; }
 .quals__row { display: flex; align-items: center; gap: 40px; padding: 34px 0; }

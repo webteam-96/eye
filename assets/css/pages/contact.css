@@ -5,17 +5,17 @@
 .contact-chips { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
 .chip { display: flex; align-items: center; gap: 14px; padding: 14px 22px 14px 14px; background: var(--white); border-radius: 50px; box-shadow: var(--sh-card); color: var(--ink); text-align: left; transition: transform var(--ui) ease, box-shadow var(--ui) ease; }
 .chip:hover { transform: translateY(-4px); box-shadow: var(--sh-float); }
-.chip__icon { flex: 0 0 48px; width: 48px; height: 48px; border-radius: 50%; background: var(--olive); color: var(--white); display: grid; place-items: center; }
+.chip__icon { flex: 0 0 48px; width: 48px; height: 48px; border-radius: 50%; background: var(--rose); color: var(--white); display: grid; place-items: center; }
 .chip__icon .ico { width: 22px; height: 22px; }
 .chip__text { font-size: 15px; line-height: 20px; font-weight: 500; }
-.chip__text strong { display: block; font-size: 12px; line-height: 16px; letter-spacing: .5px; text-transform: uppercase; color: var(--olive); }
+.chip__text strong { display: block; font-size: 12px; line-height: 16px; letter-spacing: .5px; text-transform: uppercase; color: var(--rose); }
 
 
 .mapbox iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
 .faq-grid { margin-top: 40px; text-align: left; }
 .faq-card .acc-panel p { color: var(--grey); }
-.faq-card .acc-panel a { color: var(--olive); text-decoration: underline; }
+.faq-card .acc-panel a { color: var(--rose); text-decoration: underline; }
 
 @media (max-width: 991px) {
   .contact-chips { flex-direction: column; align-items: stretch; gap: 12px; }
@@ -30,8 +30,8 @@
 .contact-chips--stack .chip { border-radius: 16px; }
 .contact-social { display: flex; gap: 12px; margin: 6px 0 0; }
 .contact-social a { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 50px; background: var(--white); box-shadow: var(--sh-card); color: var(--ink); font-size: 14px; font-weight: 600; transition: transform var(--ui) ease; }
-.contact-social a:hover { transform: translateY(-3px); color: var(--olive); }
-.contact-social .ico { width: 18px; height: 18px; color: var(--olive); }
+.contact-social a:hover { transform: translateY(-3px); color: var(--rose); }
+.contact-social .ico { width: 18px; height: 18px; color: var(--rose); }
 .mapbox--row { flex: 1 1 auto; max-width: none; aspect-ratio: auto; min-height: 360px; }
 .mapbox--row iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 @media (max-width: 991px) {
@@ -43,6 +43,6 @@
   .contact-chips--stack { flex: 0 0 50%; }
 }
 .mapbox--row .mapbox__in { position: absolute; inset: 0; display: grid; place-content: center; gap: 10px; text-align: center; }
-.mapbox--row .mapbox__pin { width: 40px; height: 40px; color: var(--olive); margin: 0 auto; }
+.mapbox--row .mapbox__pin { width: 40px; height: 40px; color: var(--rose); margin: 0 auto; }
 .mapbox--row .mapbox__in p { margin: 0; }
 .mapbox--row .mapbox__in strong { color: var(--ink); }
