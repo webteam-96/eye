@@ -2,6 +2,10 @@
 
 Running log: decisions made, things tried and rejected, and what the client still owes. Passes 1 and 2 are the rejected first direction and are kept as history; Pass 3 is the build that ships.
 
+## Pass 8 — logo back, gold and pink together (18 Sep 2026)
+
+- Client (in Marathi): the logo had gone pink, keep the original; then "not pink, the saree colour"; then "no pink at all"; then "both pink and the saree colour". Final state: the Netram logo mark, lockup and favicon are the original olive files again (restored from the first commit); the site's main colour is the saree gold deepened for text (`--rose #9E6210`, 5.0:1 on white; the token names were kept to avoid a second rename), dark blocks are a dark saree gold (`--plum #5C3707`), and pink is the accent (`--amber #D6246E`: heading strokes, icon badges, ring counters, the Eye Maitri block, pink buttons, the dot grids), always with white on it. The bright photo gold survives as `--gold #D4912E` for the EKG lines and headings on the dark bands.
+- Recognition band: the client's trophy-and-applause photograph (downloaded to `assets/img/dr-recognition-bg-*`, not hot-linked) sits behind the band under a translucent gold wash; the EKG divider under the heading is now white and thicker so it reads on the photo.
 ## Pass 7 — colour change and Home reorder (18 Sep 2026)
 
 - Client: "don't like the green colour… use some vibrant, happy colour, the pink or the saree colour in the photo." Sampled from `WhatsApp Image 2026-09-17 at 7.04.15 PM.jpeg`: carnation pink and saree gold. Tokens renamed and revalued: `--rose #D6246E` (4.8:1 on white, so white text on rose buttons and rose text on white both pass AA), `--rose-tint`, `--rose-light #FFF0F6`, `--plum #7A1F4C` (deep blocks, 9.9:1), `--amber #D4912E` (saree gold, ink text only), `--paper #FDF3F7` blush wash. The Netram logo mark and favicon are recoloured to rose (the official mark is olive; revert `tools/inject-svg.py` and the three SVGs if the Foundation needs its own colour kept).

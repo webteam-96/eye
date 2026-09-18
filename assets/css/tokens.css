@@ -1,17 +1,18 @@
 /* Tokens — the Medic 128 system (measured), recoloured from the Netram logo.
-   Medic teal → rose (client's carnation pink, 18 Sep 2026), Medic navy → near-black, Medic pink → saree gold, pink wash → blush. */
+   Medic teal → saree gold (client's photo, 18 Sep 2026), Medic navy → near-black, Medic pink → saree gold, pink wash → blush. */
 :root {
   /* colour */
   --ink: #383434;                 /* headings, footer ground  (Medic #223645) */
   --grey: #707070;                /* paragraphs               (Medic #707070) */
   --link: #222222;                /* nav links                (Medic #222222) */
-  --rose: #D6246E;                 /* brand: the carnation pink from the client's photo (Medic teal #36807F); 4.8:1 on white */
-  --rose-tint: rgba(214, 36, 110, .14);
-  --rose-light: #FFF0F6;           /* button hover text on rose */
-  --plum: #7A1F4C;                 /* deep block               (Medic #083A3A) */
-  --amber: #D4912E;                /* the saree gold; ink text only (5.0:1), never white text on it */
+  --rose: #9E6210;                 /* brand: the saree gold from the client's photo, deepened for text (Medic teal #36807F); 5.0:1 on white */
+  --rose-tint: rgba(158, 98, 16, .14);
+  --rose-light: #FFF6E8;           /* button hover text on gold */
+  --plum: #5C3707;                 /* deep block: dark saree gold (Medic #083A3A) */
+  --amber: #D6246E;                /* accent: the carnation pink from the client's photo; white text on it (4.8:1), never ink */
+  --gold: #D4912E;                 /* the saree gold as it is in the photo, for lines and highlights on the dark bands */
   --amber-text: #8A5F14;
-  --paper: #FDF3F7;               /* blush wash               (Medic pink wash) */
+  --paper: #FBF4EA;               /* warm wash                (Medic pink wash) */
   --white: #FFFFFF;
   --line-nav: rgba(0, 0, 0, .2);
   --line-row: rgba(56, 52, 52, .2);
@@ -46,7 +47,7 @@
   /* shadows — Medic has three */
   --sh-card: 0 0 20px -1px rgba(0, 0, 0, .1);
   --sh-float: 0 20px 40px rgba(0, 0, 0, .1);
-  --sh-btn: 0 5px 30px rgba(214, 36, 110, .3);
+  --sh-btn: 0 5px 30px rgba(158, 98, 16, .3);
 
   /* motion — Save a Child's Heart recipes */
   --ease-sach: cubic-bezier(0, 0, 0, 1);       /* their (0,.003,0,1.003): instant start, long settle */

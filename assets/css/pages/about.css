@@ -65,7 +65,7 @@
 
 /* Qualifications: Save a Child's Heart 'How your donation saves hearts' zig-zag with EKG lines */
 .quals { background: var(--plum); color: var(--white); padding: var(--sec) 0 60px; overflow: hidden; }
-.quals__title { text-align: center; color: var(--amber); text-transform: uppercase; letter-spacing: .5px; font-size: 40px; line-height: 48px; margin: 0 0 30px; }
+.quals__title { text-align: center; color: var(--gold); text-transform: uppercase; letter-spacing: .5px; font-size: 40px; line-height: 48px; margin: 0 0 30px; }
 .quals__list { list-style: none; margin: 0; padding: 0; }
 .quals__row { display: flex; align-items: center; gap: 40px; padding: 34px 0; }
 .quals__row--flip { flex-direction: row-reverse; }
@@ -75,7 +75,7 @@
 .quals__line { flex: 1 1 auto; position: relative; }
 .quals__line::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 3px; margin-top: -1px; background: rgba(255, 255, 255, .15); }
 .quals__line .ekg { position: relative; width: 100%; height: 80px; }
-.quals__line path { stroke: var(--amber); stroke-width: 4; }
+.quals__line path { stroke: var(--gold); stroke-width: 4; }
 @media (max-width: 991px) {
   .quals { padding: 60px 0 30px; }
   .quals__title { font-size: 30px; line-height: 38px; }

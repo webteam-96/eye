@@ -6,7 +6,7 @@
 .tl { position: relative; height: calc(100vh + 1800px); background: var(--plum); color: var(--white); }
 .tl__sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: 60px 0 40px; }
 .tl__map { position: absolute; left: 50%; top: 52%; width: 620px; height: 620px; transform: translate(-50%, -50%); background: rgba(255, 255, 255, .06); -webkit-mask: url(../../img/india.svg) center / contain no-repeat; mask: url(../../img/india.svg) center / contain no-repeat; pointer-events: none; }
-.tl__pin { position: absolute; left: 50%; top: 52%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--amber); box-shadow: 0 0 0 6px rgba(217, 154, 43, .25); transform: translate(-150px, -110px); }
+.tl__pin { position: absolute; left: 50%; top: 52%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--amber); box-shadow: 0 0 0 6px rgba(212, 145, 46, .25); transform: translate(-150px, -110px); }
 .tl__pin::before, .tl__pin::after { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid var(--amber); animation: tl-pulse 2.4s ease-out infinite; opacity: 0; }
 .tl__pin::after { animation-delay: 1.2s; }
 @keyframes tl-pulse { 0% { transform: scale(.6); opacity: .9; } 100% { transform: scale(3.2); opacity: 0; } }
@@ -19,9 +19,9 @@
 .tl-item { flex: 0 0 380px; padding: 0 60px 0 0; }
 .tl-year { font-size: 57.6px; line-height: 1; font-weight: 700; color: var(--white); margin-bottom: 14px; }
 .tl-item p { font-size: 14.4px; line-height: 22px; color: rgba(255, 255, 255, .85); margin: 0; max-width: 300px; }
-.tl-item .todo { color: var(--amber); }
+.tl-item .todo { color: var(--gold); }
 .tl-line { position: absolute; left: calc((100vw - 1170px) / 2); bottom: 10px; width: 2310px; height: 60px; }
-.tl-line path { stroke: var(--amber); stroke-width: 3; }
+.tl-line path { stroke: var(--gold); stroke-width: 3; }
 .tl__hint-m { display: none; }
 .tl__hint { position: relative; font-size: 13px; letter-spacing: .5px; text-transform: uppercase; color: rgba(255, 255, 255, .6); margin: 0; text-align: center; }
 
@@ -77,7 +77,7 @@ a.press:hover { transform: translateY(-6px); box-shadow: var(--sh-float); }
 .press__link .btn__icon { position: relative; right: auto; top: auto; transform: none; margin: 0; width: 24px; height: 24px; border-color: var(--rose-tint); background: var(--rose-tint); }
 .press__link .btn__icon::after { left: 8px; top: 7px; border-color: var(--rose); }
 a.press:hover .press__link .btn__icon { transform: translateX(6px); }
-.press__tag { margin-top: auto; align-self: flex-start; font-size: 12px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; color: var(--amber-text); background: rgba(217, 154, 43, .18); border-radius: 20px; padding: 4px 10px; }
+.press__tag { margin-top: auto; align-self: flex-start; font-size: 12px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; color: var(--amber-text); background: rgba(212, 145, 46, .18); border-radius: 20px; padding: 4px 10px; }
 
 .cta-photos { margin-top: 0; }
 

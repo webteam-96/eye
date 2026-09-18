@@ -16,13 +16,13 @@ india = open(os.path.join(IMG, "india.svg"), encoding="utf-8").read().strip()
 subs = re.findall(r"M[^M]+?Z", P["mark"])
 
 BLOCKS = {
-    "LOCKUP": f'<svg class="lockup" viewBox="20 18 660 224" aria-hidden="true" focusable="false"><path class="mark" fill="#D6246E" fill-rule="evenodd" d="{P["mark"]}"/><path class="iris" fill="#383434" fill-rule="evenodd" d="{P["iris"]}"/><path class="word" fill="#7A1F4C" fill-rule="evenodd" d="{P["word"]}"/></svg>',
-    "MARK": '<svg class="chart__mark" viewBox="20 18 314 224" aria-hidden="true" focusable="false">' + "".join(f'<path class="lash" style="--i:{i}" fill="#FDF3F7" d="{s}"/>' for i, s in enumerate(subs)) + f'<path class="iris" fill="#383434" fill-rule="evenodd" d="{P["iris"]}"/></svg>',
-    "MARKSMALL": f'<svg viewBox="20 18 314 224" aria-hidden="true" focusable="false"><path fill="#F2A5C6" fill-rule="evenodd" d="{P["mark"]}"/><path fill="#FDF3F7" fill-rule="evenodd" d="{P["iris"]}"/></svg>',
-    "LASH": f'<svg viewBox="{lash["bbox"][0]:.0f} {lash["bbox"][1]:.0f} {lash["bbox"][2]-lash["bbox"][0]:.0f} {lash["bbox"][3]-lash["bbox"][1]:.0f}" preserveAspectRatio="xMaxYMax meet" aria-hidden="true" focusable="false"><path fill="#7A1F4C" d="{lash["d"]}"/></svg>',
-    "SPINEEND": '<svg class="spine__end" viewBox="20 18 314 224" aria-hidden="true" focusable="false">' + "".join(f'<path class="lash" fill="#F2A5C6" d="{s}"/>' for s in subs) + f'<path class="iris" fill="#383434" fill-rule="evenodd" d="{P["iris"]}"/></svg>',
+    "LOCKUP": f'<svg class="lockup" viewBox="20 18 660 224" aria-hidden="true" focusable="false"><path class="mark" fill="#5E6A42" fill-rule="evenodd" d="{P["mark"]}"/><path class="iris" fill="#383434" fill-rule="evenodd" d="{P["iris"]}"/><path class="word" fill="#3C4632" fill-rule="evenodd" d="{P["word"]}"/></svg>',
+    "MARK": '<svg class="chart__mark" viewBox="20 18 314 224" aria-hidden="true" focusable="false">' + "".join(f'<path class="lash" style="--i:{i}" fill="#F6F4EC" d="{s}"/>' for i, s in enumerate(subs)) + f'<path class="iris" fill="#383434" fill-rule="evenodd" d="{P["iris"]}"/></svg>',
+    "MARKSMALL": f'<svg viewBox="20 18 314 224" aria-hidden="true" focusable="false"><path fill="#9CA97B" fill-rule="evenodd" d="{P["mark"]}"/><path fill="#F6F4EC" fill-rule="evenodd" d="{P["iris"]}"/></svg>',
+    "LASH": f'<svg viewBox="{lash["bbox"][0]:.0f} {lash["bbox"][1]:.0f} {lash["bbox"][2]-lash["bbox"][0]:.0f} {lash["bbox"][3]-lash["bbox"][1]:.0f}" preserveAspectRatio="xMaxYMax meet" aria-hidden="true" focusable="false"><path fill="#3C4632" d="{lash["d"]}"/></svg>',
+    "SPINEEND": '<svg class="spine__end" viewBox="20 18 314 224" aria-hidden="true" focusable="false">' + "".join(f'<path class="lash" fill="#9CA97B" d="{s}"/>' for s in subs) + f'<path class="iris" fill="#383434" fill-rule="evenodd" d="{P["iris"]}"/></svg>',
     "MARKWHITE": '<svg class="mark" viewBox="20 18 314 224" aria-hidden="true" focusable="false"><path fill="#FFFFFF" fill-rule="evenodd" d="' + P["mark"] + '"/><path fill="#383434" fill-rule="evenodd" d="' + P["iris"] + '"/></svg>',
-    "LOCKUPWHITE": '<svg class="lockup" viewBox="20 18 660 224" aria-hidden="true" focusable="false"><path fill="#F2A5C6" fill-rule="evenodd" d="' + P["mark"] + '"/><path fill="#FFFFFF" fill-rule="evenodd" d="' + P["iris"] + '"/><path fill="#FFFFFF" fill-rule="evenodd" d="' + P["word"] + '"/></svg>',
+    "LOCKUPWHITE": '<svg class="lockup" viewBox="20 18 660 224" aria-hidden="true" focusable="false"><path fill="#9CA97B" fill-rule="evenodd" d="' + P["mark"] + '"/><path fill="#FFFFFF" fill-rule="evenodd" d="' + P["iris"] + '"/><path fill="#FFFFFF" fill-rule="evenodd" d="' + P["word"] + '"/></svg>',
     "INDIA": india,
 }
 
