@@ -479,8 +479,8 @@ html.done .loader { display: none; }
 .dept .acc-panel > div { border: 0; background: none; border-radius: 0; }
 .dept .acc-panel p { margin: 12px 0 0; padding: 0; }
 .acc-btn--link { width: auto; min-height: 24px; padding: 0; border: 0; background: none; color: var(--rose); font-size: 16px; font-weight: 700; gap: 8px; }
-.acc-btn--link .acc-chev { margin-left: 0; width: 22px; height: 22px; border: 1px solid var(--rose-tint); background: var(--rose-tint); transition: transform var(--ui) ease, background var(--ui) ease; }
-.acc-btn--link .acc-chev::after { left: 6px; top: 7px; width: 6px; height: 6px; border-width: 1.5px; border-color: var(--rose); transform: rotate(-45deg); }
+.acc-btn--link .acc-chev { margin-left: 0; flex: 0 0 22px; width: 22px; height: 22px; border: 1px solid var(--rose-tint); background: var(--rose-tint); transition: transform var(--ui) ease, background var(--ui) ease, border-color var(--ui) ease; }
+.acc-btn--link .acc-chev::after { left: 6px; top: 7px; width: 5px; height: 5px; border-width: 1.5px; border-right: 1.5px solid var(--rose); border-top: 1.5px solid var(--rose); border-bottom: 0; border-left: 0; transform: rotate(45deg); }
 .acc-btn--link:hover .acc-chev { transform: translateX(4px); }
 .acc-btn--link[aria-expanded="true"] .acc-chev { transform: rotate(90deg); background: var(--rose); border-color: var(--rose); }
 .acc-btn--link[aria-expanded="true"] .acc-chev::after { border-color: var(--white); }
@@ -507,8 +507,6 @@ p a, li a { padding-block: 4px; }
 .banner__photo--21 { aspect-ratio: 2 / 1; }
 .frame--45 { aspect-ratio: 4 / 5 !important; }
 .dept__img--sq img { object-fit: contain; background: var(--paper); }
-.dept__img--fit { background: var(--plum); }
-.dept__img--fit img { object-fit: contain; }
 .consult__lead { margin: -8px 0 22px; }
 
 /* Tablet landscape / small laptop (992–1199): the desktop layout with fluid columns instead of Medic's fixed pixel widths */
