@@ -1,18 +1,18 @@
 /* Tokens — the Medic 128 system (measured), recoloured from the Netram logo.
-   Medic teal → saree gold (client's photo, 18 Sep 2026), Medic navy → near-black, Medic pink → saree gold, pink wash → blush. */
+   Medic teal → lavender with the carnation pink as accent (client, 18 Sep 2026), Medic navy → near-black, Medic pink → saree gold, pink wash → blush. */
 :root {
   /* colour */
   --ink: #383434;                 /* headings, footer ground  (Medic #223645) */
   --grey: #707070;                /* paragraphs               (Medic #707070) */
   --link: #222222;                /* nav links                (Medic #222222) */
-  --rose: #9E6210;                 /* brand: the saree gold from the client's photo, deepened for text (Medic teal #36807F); 5.0:1 on white */
-  --rose-tint: rgba(158, 98, 16, .14);
-  --rose-light: #FFF6E8;           /* button hover text on gold */
-  --plum: #5C3707;                 /* deep block: dark saree gold (Medic #083A3A) */
+  --rose: #5E4B9E;                 /* brand: lavender (Medic teal #36807F); 7.1:1 on white */
+  --rose-tint: rgba(94, 75, 158, .14);
+  --rose-light: #F1EEFA;           /* button hover text on lavender */
+  --plum: #3F3272;                 /* deep block: deep lavender (Medic #083A3A); 11:1 with white */
   --amber: #D6246E;                /* accent: the carnation pink from the client's photo; white text on it (4.8:1), never ink */
-  --gold: #D4912E;                 /* the saree gold as it is in the photo, for lines and highlights on the dark bands */
-  --amber-text: #8A5F14;
-  --paper: #FBF4EA;               /* warm wash                (Medic pink wash) */
+  --gold: #F3D27A;                 /* light saree gold for lines and headings on the lavender bands (4.8:1) */
+  --amber-text: #A8175A;               /* dark pink for small icons and tags on white (6.1:1) */
+  --paper: #F6F4FB;               /* lavender wash              (Medic pink wash) */
   --white: #FFFFFF;
   --line-nav: rgba(0, 0, 0, .2);
   --line-row: rgba(56, 52, 52, .2);
@@ -47,7 +47,7 @@
   /* shadows — Medic has three */
   --sh-card: 0 0 20px -1px rgba(0, 0, 0, .1);
   --sh-float: 0 20px 40px rgba(0, 0, 0, .1);
-  --sh-btn: 0 5px 30px rgba(158, 98, 16, .3);
+  --sh-btn: 0 5px 30px rgba(94, 75, 158, .3);
 
   /* motion — Save a Child's Heart recipes */
   --ease-sach: cubic-bezier(0, 0, 0, 1);       /* their (0,.003,0,1.003): instant start, long settle */
