@@ -2,7 +2,7 @@
 
 Five static pages plus a 404. Custom HTML5 + CSS3 + vanilla ES modules. No build step, no npm install, no runtime dependencies: upload the folder over SFTP and it runs.
 
-**Design direction (approved 16 Sep 2026):** the layout, components and type are [Medic 128](https://medic-128.webflow.io/) rebuilt one-to-one (home, about-us, departments, our-process, our-doctors band, faq, news, contact-us templates). Only three things differ from the reference: the content (from the PRD), the palette (saree gold `#9E6210` with a dark gold `#5C3707` for deep blocks, carnation pink `#D6246E` as the accent, bright gold `#D4912E` for lines on dark bands, near-black `#383434`; both colours sampled from the client's photograph on 18 Sep 2026; the logo keeps its original olive) and the photography. Motion comes from [Save a Child's Heart](https://25.saveachildsheart.org/): the electrocardiogram trace (drawn on load, under heading words, scrubbed by scroll on the Expertise timeline), the rise-and-fade reveals, the marquee strips, the card lift and image-zoom hovers, and the one-second preloader. `REFERENCE-TEARDOWN.md` holds the measured teardown of both references and the section-by-section mapping.
+**Design direction (approved 16 Sep 2026):** the layout, components and type are [Medic 128](https://medic-128.webflow.io/) rebuilt one-to-one (home, about-us, departments, our-process, our-doctors band, faq, news, contact-us templates). Only three things differ from the reference: the content (from the PRD), the palette (saree gold `#9E6210` with a dark gold `#5C3707` for deep blocks, carnation pink `#D6246E` as the accent, bright gold `#D4912E` for lines on dark bands, near-black `#383434`; both colours sampled from the client's photograph on 18 Sep 2026; the logo keeps its original olive) and the photography; the page ground is warm ivory `#FAF6EE` in place of Medic's white (client, 19 Sep 2026). Motion comes from [Save a Child's Heart](https://25.saveachildsheart.org/): the electrocardiogram trace (drawn on load, under heading words, scrubbed by scroll on the Expertise timeline), the rise-and-fade reveals, the marquee strips, the card lift and image-zoom hovers, and the one-second preloader. `REFERENCE-TEARDOWN.md` holds the measured teardown of both references and the section-by-section mapping.
 
 **To preview locally**, serve the folder rather than double-clicking `index.html` (browsers block ES modules from `file://`): `python -m http.server 8090` in this folder, then open http://127.0.0.1:8090/.
 
@@ -39,7 +39,9 @@ assets/
   js/form.js          validation, honeypot, the stubbed submit, ?type= pre-select
   fonts/              poppins-400/500/600/700.woff2 (Latin subsets), noto-devanagari.woff2
   img/                photographs: dr-*.{jpg,webp} from the client's Drive shoots (480/800/1200, uncropped, tools/prepare-drive.py),
-                      the deck's Foundation/award photos (tools/prepare-images.py), logo SVGs, india.svg, og.jpg, favicon.svg
+                      dr-cornea-2, dr-glaucoma-2 and dr-child-exam are the client's clinic photographs for the cornea, glaucoma and
+                      children tiles (originals in originals/, 19 Sep 2026 batch), the deck's Foundation/award photos
+                      (tools/prepare-images.py), logo SVGs, india.svg, og.jpg, favicon.svg
 tools/                asset-prep scripts (Python). Not needed to deploy or edit the site.
 ```
 
