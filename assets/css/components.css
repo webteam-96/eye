@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* ---------- Navbar: white, 15px 0, hairline bottom, static ---------- */
-.navbar { background: var(--white); padding: 15px 0; border-bottom: 1px solid var(--line-nav); position: relative; z-index: 20; }
+.navbar { background: var(--ground); padding: 15px 0; border-bottom: 1px solid var(--line-nav); position: relative; z-index: 20; }
 .navbar__in { display: flex; align-items: center; min-height: 82px; gap: 20px; }
 .navbar__logo { display: flex; align-items: center; gap: 12px; flex: 0 0 auto; }
 .navbar__logo svg { height: 52px; width: auto; }
@@ -25,7 +25,7 @@
   .navbar__in { min-height: 50px; }
   .navbar__logo svg { height: 40px; }
   .navbar__burger { display: block; }
-  .nav-menu { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--white); border-bottom: 1px solid var(--line-nav); flex-direction: column; align-items: stretch; padding: 10px 0 20px; box-shadow: var(--sh-float); }
+  .nav-menu { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--ground); border-bottom: 1px solid var(--line-nav); flex-direction: column; align-items: stretch; padding: 10px 0 20px; box-shadow: var(--sh-float); }
   .nav-menu.is-open { display: flex; }
   .nav-link { padding: 15px var(--gutter); border-top: 1px solid rgba(0, 0, 0, .06); }
   .navbar .navbar__cta { display: none; }

@@ -14,6 +14,7 @@
   --amber-text: #A8175A;               /* dark pink for small icons and tags on white (6.1:1) */
   --paper: #F6F4FB;               /* lavender wash              (Medic pink wash) */
   --white: #FFFFFF;
+  --ground: #FAF6EE;              /* page ground: warm ivory in place of white (client, 19 Sep 2026); --grey body text on it 4.6:1, AA */
   --line-nav: rgba(0, 0, 0, .2);
   --line-row: rgba(56, 52, 52, .2);
   --line-input: #CCCCCC;
