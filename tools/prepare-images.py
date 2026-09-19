@@ -11,16 +11,14 @@ Treatments (the CSS-equivalent is documented in README.md):
   B  stages, crowds, awards:             moss -> paper duotone
 """
 import io, json, os, sys
-import numpy as np
 from PIL import Image, ImageEnhance
-import fitz
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PDF = os.path.join(ROOT, "Dr Anchal Gupta Profile._20260822_001712_0000 (1).pdf")
 OUT = os.path.join(ROOT, "assets", "img")
-OLIVE = np.array([0x5E, 0x6A, 0x42]) / 255
-MOSS = np.array([0x3C, 0x46, 0x32]) / 255
-PAPER = np.array([0xF6, 0xF4, 0xEC]) / 255
+OLIVE = [0x5E, 0x6A, 0x42]
+MOSS = [0x3C, 0x46, 0x32]
+PAPER = [0xF6, 0xF4, 0xEC]
 
 # name: (xref | path, crop box as fractions (l,t,r,b), aspect w/h, tier, widths)
 TREAT = "none"   # "none" = natural photography (Medic 128 reference); "tiers" = olive treatments
@@ -61,12 +59,17 @@ SOURCES = {
     "iam66":           (1510, (0, 0, 1, 1),           1,   "A", (480,)),
     "oxygen":          (371,  (.06, .30, .48, .47),   1,   "B", (450,)),
     "oxygen-b":        (371,  (.06, .585, .48, .74),  3/2, "B", (450,)),
+    # client's clinic photographs, 19 Sep 2026 (WhatsApp batch; originals/ )
+    "dr-cornea-2":   ("originals/corneal condition .png",             (0, 0, 1, 1), 3/2, "A", (480, 800)),
+    "dr-glaucoma-2": ("originals/Glaucoma.jpg",                       (0, 0, 1, 1), 3/2, "A", W3),
+    "dr-child-exam": ("originals/Children and refractive error.jpg",  (0, 0, 1, 1), 3/2, "A", W3),
 }
 
 
 def load(src):
     if isinstance(src, str):
         return Image.open(os.path.join(ROOT, src)).convert("RGB")
+    import fitz                      # deck extraction only; not needed for file sources
     doc = fitz.open(PDF)
     return Image.open(io.BytesIO(doc.extract_image(src)["image"])).convert("RGB")
 
@@ -83,28 +86,37 @@ def crop(im, box, aspect):
 
 
 def soft_light(cb, cs):
+    import numpy as np
     d = np.where(cb <= .25, ((16 * cb - 12) * cb + 4) * cb, np.sqrt(cb))
     return np.where(cs <= .5, cb - (1 - 2 * cs) * cb * (1 - cb), cb + (2 * cs - 1) * (d - cb))
 
 
 def tier_a(im):
+    import numpy as np
     im = ImageEnhance.Color(im).enhance(.85)
     im = ImageEnhance.Contrast(im).enhance(1.05)
     a = np.asarray(im).astype(np.float64) / 255
-    a = a * .75 + soft_light(a, OLIVE) * .25
+    a = a * .75 + soft_light(a, np.array(OLIVE) / 255) * .25
     return Image.fromarray((np.clip(a, 0, 1) * 255).round().astype(np.uint8))
 
 
 def tier_b(im):
+    import numpy as np
     g = np.asarray(ImageEnhance.Contrast(im.convert("L")).enhance(1.1)).astype(np.float64) / 255
-    a = MOSS + (PAPER - MOSS) * g[..., None]
+    a = np.array(MOSS) / 255 + (np.array(PAPER) / 255 - np.array(MOSS) / 255) * g[..., None]
     return Image.fromarray((np.clip(a, 0, 1) * 255).round().astype(np.uint8))
 
 
 def main():
     os.makedirs(OUT, exist_ok=True)
-    manifest = {}
-    for name, (src, box, aspect, tier, widths) in SOURCES.items():
+    names = sys.argv[1:]
+    unknown = [n for n in names if n not in SOURCES]
+    if unknown:
+        sys.exit(f"unknown source name(s): {', '.join(unknown)}")
+    todo = {k: v for k, v in SOURCES.items() if not names or k in names}
+    mpath = os.path.join(OUT, "manifest.json")
+    manifest = json.load(open(mpath)) if os.path.exists(mpath) else {}
+    for name, (src, box, aspect, tier, widths) in todo.items():
         im = crop(load(src), box, aspect)
         im = im if TREAT == "none" else (tier_a(im) if tier == "A" else tier_b(im))
         sw = im.size[0]
@@ -120,7 +132,7 @@ def main():
         manifest[name] = {"widths": done, "aspect": aspect, "src_w": sw, "tier": tier}
         sizes = ", ".join(f"{w}:{os.path.getsize(os.path.join(OUT, f'{name}-{w}.webp'))//1024}K" for w in done)
         print(f"{name:16} {tier} {sw}px  {sizes}")
-    json.dump(manifest, open(os.path.join(OUT, "manifest.json"), "w"), indent=1)
+    json.dump(manifest, open(mpath, "w"), indent=1)
 
 
 if __name__ == "__main__":

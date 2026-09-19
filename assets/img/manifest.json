@@ -307,5 +307,34 @@
   "aspect": 1.5,
   "src_w": 454,
   "tier": "B"
+ },
+ "dr-cornea-2": {
+  "widths": [
+   480,
+   800
+  ],
+  "aspect": 1.5,
+  "src_w": 941,
+  "tier": "A"
+ },
+ "dr-glaucoma-2": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "aspect": 1.5,
+  "src_w": 4032,
+  "tier": "A"
+ },
+ "dr-child-exam": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "aspect": 1.5,
+  "src_w": 1350,
+  "tier": "A"
  }
 }
