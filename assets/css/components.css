@@ -360,7 +360,7 @@ textarea.input { height: 120px; max-width: none; resize: vertical; }
 .footer__col--links a::before { content: ""; position: absolute; left: 2px; top: 14px; width: 7px; height: 7px; border-right: 2px solid var(--amber); border-bottom: 2px solid var(--amber); transform: rotate(-45deg); transition: transform var(--ui) ease; }
 .footer__col--links a:hover::before { transform: rotate(-45deg) translate(2px, 2px); }
 .footer__col--contact a { display: flex; align-items: center; gap: 12px; line-height: 22px; }
-.footer__col--contact .ico { flex: 0 0 18px; width: 18px; height: 18px; margin: 0; color: var(--amber); }
+.footer__col--contact .ico { flex: 0 0 34px; width: 34px; height: 34px; margin: 0; padding: 8px; border-radius: 50%; background: var(--white); color: var(--amber-text); }
 .footer__col a:hover { color: var(--rose-light); opacity: .8; }
 .footer__bottom { text-align: center; margin-top: 40px; font-size: 14px; line-height: 16.8px; font-weight: 500; color: var(--white); }
 @media (max-width: 991px) {
