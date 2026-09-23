@@ -25,7 +25,7 @@ if (loader) {
 initNav();
 initMotion(reduced);
 initCounters(reduced);
-if (document.querySelector('.gallery')) import('./gallery.js').then(m => m.initGallery());
+if (document.querySelector('.gallery, a.js-lb')) import('./gallery.js').then(m => m.initGallery());
 if (document.querySelector('form[data-enquiry]')) import('./form.js').then(m => m.initForm());
 
 // Floating WhatsApp / call — enters after 2s (PRD §7).

@@ -85,3 +85,7 @@
   .quals__line { width: 100%; }
   .quals__line .ekg { height: 44px; }
 }
+
+/* In the press: the magazine spread shown whole, opening full size in the viewer */
+.press-feature__frame { display: block; max-width: 880px; margin: 36px auto 0; border-radius: var(--r-card); overflow: hidden; box-shadow: var(--sh-float); background: var(--white); cursor: zoom-in; }
+.press-feature__frame img { display: block; width: 100%; height: auto; }

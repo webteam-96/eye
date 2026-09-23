@@ -40,9 +40,13 @@ assets/
   fonts/              poppins-400/500/600/700.woff2 (Latin subsets), noto-devanagari.woff2
   img/                photographs: dr-*.{jpg,webp} from the client's Drive shoots (480/800/1200, uncropped, tools/prepare-drive.py),
                       dr-cornea-2, dr-glaucoma-2 and dr-child-exam are the client's clinic photographs for the cornea, glaucoma and
-                      children tiles (originals in originals/, 19 Sep 2026 batch), the deck's Foundation/award photos
-                      (tools/prepare-images.py), logo SVGs, india.svg, og.jpg, favicon.svg
-tools/                asset-prep scripts (Python). Not needed to deploy or edit the site.
+                      children tiles (originals in originals/, 19 Sep 2026 batch), the Foundation project and award
+                      photographs from the client's "Dr. Anchal Website Images" Drive folder (originals/client,
+                      tools/prepare-client.py, 23 Sep 2026 batch), the remaining deck photos (tools/prepare-images.py),
+                      logo SVGs, india.svg, og.jpg, favicon.svg
+tools/                asset-prep scripts (Python): prepare-drive.py and prepare-client.py size the client's photographs,
+                      make-tedx-collage.py builds the 2026 award tile, prepare-logos.py normalises the partner logos.
+                      Not needed to deploy or edit the site.
 ```
 
 ## Editing

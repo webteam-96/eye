@@ -34,6 +34,88 @@ Running log: decisions made, things tried and rejected, and what the client stil
 - **Footer** is three columns: brand, Quick links (amber chevrons), Contact (map, phone, WhatsApp, mail, globe icons).
 - **Responsive.** New 992–1199 layer: Medic's fixed pixel columns become percentages, the navbar tightens (the Home link had pushed it past 1024), the blocks grid is fluid, image grids use `minmax(0, 1fr)` so an `<img width>` attribute can never widen a track (that was the Foundation overflow), the CTA box is a flex column with a smaller button below 1200. Verified with `scratchpad/realuser.js` at 360 / 390 / 768 / 1024 / 1280 / 1440 / 1920 on all six pages: no horizontal overflow, no cover-cropped images, plus the real-user pass (phone menu open/Escape, one-open accordion, slider, form validation, FAB, timeline swipe, show-all awards, lightbox open/Escape, live map), 0 console errors.
 
+## Pass 9 — the client's own project and award photographs (23 Sep 2026)
+
+42 files from the Drive folder "Dr. Anchal Website Images" (originals/client, gitignored). `tools/prepare-client.py`
+holds the mapping: site asset base, source file, the aspect the slot needs, where to anchor the crop, and the widths the
+HTML asks for. Re-run it after any change; pass a base name to rebuild just one.
+
+Replaced with the client's own photographs, all sharper than what they replaced: the Foundation hero banner and the
+Project Roshini tile (and the Home "1,00,000+ children screened" card), Mission 6/6, the Transgender Medical Camp,
+Chashma Bus, the Mission 6/6 gallery frame, the Eye Maitri block (it had been borrowing the IOCL photo), the
+conferences band (the client's own HOA Vista 2023 frame), and the 2025, 2022, 2017 and Future Female Forward award
+tiles. The Recognition band on Home now carries the Future Female Forward stage instead of the 864px stock backdrop it
+had been stretching to 1440. The two page heroes (Expertise, About) gained 1800 and 2400 renditions from the 6000px
+originals.
+
+Not used, with reasons:
+- `Nayan Hans` (the in-van autorefractor frame) is AI-generated: at 1:1 the sponsor sticker reads "A OSR Imlising by
+  IndianOil" and "IndianOii Aumegean", and the Topcon sub-label is illegible squiggles. The original Nayan Hans
+  photograph stays.
+- Both `Ted X` files are event posters, not photographs of the talk; the existing TEDx stage photo is better.
+- `Medgate` is a certificate graphic, ~80% burned-in type on magenta — it would fight the ivory ground.
+- `Fusion` is a menstrual-hygiene campaign with a phone-camera watermark, and `Mind Vriksha`, `NBCFDC` and the six bank
+  and corporate logos are logos with no slot on the site.
+- `Womens Era` is a two-page inside spread, not a cover. The site calls it a cover feature in two places; worth
+  checking with the client before it goes on a press card.
+
+Round two, same day, on the client's instructions: the Recognition band is reframed so all four people on the
+Future Female Forward stage are whole; Nayan Hans and Mission 6/6 take the Drive photographs the client named (the
+constable-screening frame moves to the gallery); the 2026 tile carries a three-photograph TEDx collage built by
+`tools/make-tedx-collage.py` (speaker card, stage photograph, TEDxCVS title panel) at the tile's own 575x420 shape;
+the Medgate certificate becomes the 2021 tile's photograph; and a partner logo strip runs above the footer on Home,
+reusing the press marquee with `tools/prepare-logos.py` normalising eight logos onto a common white tile.
+
+The seven award photographs open in the lightbox the Foundation gallery already uses: each card's photograph is
+wrapped in an `a.award-card__zoom` carrying the full-size file, a caption and an alt line, and `gallery.js` now binds
+`.gallery a, a.award-card__zoom`. No second viewer, no library. The text panel still sits above the link, so only the
+photograph is clickable.
+
+Round three: the Eye Maitri block and the Future Female Forward tile hold sliders rather than single photographs
+(both Eye Maitri frames, all three Future Female frames), and a Project Roshni feature sits above Eye Maitri on the
+Foundation page with its own two-photograph slider and the 1,20,000+ figure the client supplied. The viewer now scopes
+itself to the clicked link's `[data-lb-group]`, so the awards, the gallery and each slider browse on their own instead
+of running into one another. The awards grid gained an explicit `grid-template-rows` so the 2021 row is 275px and the
+2020 row 125px; the pair still adds up to the span 2022 and Future Female Forward share, so nothing else moved. The
+Medgate certificate sits whole above its text in a stacked card.
+
+The Future Female Forward tile runs itself: `data-autoplay="3000"` on the slider, handled in `initSlider`, which
+holds while the pointer or keyboard is on the card, while the photo viewer is open over it, and while the tab is in
+the background. It respects reduced motion. No arrows; a click opens the viewer.
+
+Round four: the Foundation banner carries the team outside the centre (team.jpg at 2:1) and the school photograph
+it replaced moved into the Project Roshni slider, which now holds three. The About "Netram's story" band carries
+team-2.jpg; its frame lost the `frame--45` portrait override and uses the band's own 370/250, so the photograph needs
+no crop. A Project Garima section sits after Project Roshni with the Fusion Microfinance photograph (framed to drop
+the phone-camera watermark along its bottom edge) and the 36,000 figure. The Surgical distinction band holds both
+IPCL stage photographs in a slider.
+
+Note for the client: the Drive file named "IPCL Gold medal" (1080x488) is not the IPCL award at all, it is the HOA
+Vista 2023 conference, and it sits in the conferences band below with that caption. The Surgical distinction slider
+therefore uses the two genuine IPCL stage frames.
+
+Round five: every slider lost its arrows and runs itself (`data-autoplay` on the element, 3s for the photo sliders
+and 4.5s for the Recognition slider, which carries text to read). Slides now share one grid cell and cross-fade over
+600ms instead of snapping, and the dead arrow styling is gone. A Woman's Era section sits above "A few moments" on
+About, with the spread shown at 880px and opening at 2000px in the viewer. Two theatre photographs joined the
+Foundation gallery, which now holds seventeen. Project Garima moved onto the lavender ground with its figure set as a
+rule-and-number, and it and Eye Maitri gained the section's top padding, which both had been missing.
+
+Thirty-five of the forty-two Drive files are now on the site. The nine left over: mission-6-6-2, nayan-hans-2 (the
+AI-generated one), the five OT frames, project-roshni-5 and womens-era.
+
+Twenty-nine of the forty-two Drive files are on the site. The thirteen that are not: fusion, ipcl-gold-medal-2,
+mission-6-6-2, nayan-hans-2 (the AI-generated one), the five OT frames, project-roshni-5, both Team photographs and
+womens-era.
+
+Worth raising with the client: the new Project Roshni copy says 1,20,000+ children reached, while the impact block on
+the same page and the Home trust card still say 1,00,000+, and the accordion says "more than one lakh". The Project
+Roshni registration photograph carries a Herbalife banner while the new copy credits IGL.
+
+Still blurry, because no photograph exists for them: the India CSR Leadership Summit 2019 award tile (0.83x at its
+painted size), the Eye Mela tile (0.91x), Oxygen Sewa, I Am 6/6, the IPCL Gold Award frames and the Chashma Bus tile
+(the client's own file is the same 484px as the one it replaced).
+
 ## Pass 4 — client changes after review (17 Sep 2026)
 
 Requested by the client on seeing the Medic-exact build; each item was built, then verified in real Chrome at 1440 and 390.

@@ -212,19 +212,19 @@
 .band__deco .band__dot:nth-child(5) { right: 28%; top: 22%; }
 .band__deco .band__dot:nth-child(6) { right: 20%; top: 62%; }
 @media (max-width: 991px) { .band__deco { display: none; } }
-.slider { position: relative; max-width: 570px; margin: 0 auto; text-align: center; }
-.slide { display: none; }
-.slide.is-active { display: block; }
+.slider { position: relative; max-width: 570px; margin: 0 auto; text-align: center; display: grid; }
+/* every slide sits in the same grid cell, so one can fade out under the next */
+.slide { grid-area: 1 / 1; opacity: 0; visibility: hidden; transition: opacity .6s ease, visibility 0s linear .6s; }
+.slide.is-active { opacity: 1; visibility: visible; transition: opacity .6s ease; }
+@media (prefers-reduced-motion: reduce) { .slide, .slide.is-active { transition: none; } }
 .slide__ava { width: 110px; height: 110px; border-radius: 50%; margin: 20px auto 30px; background: var(--white); color: var(--rose); display: grid; place-items: center; font-size: 40px; font-weight: 700; overflow: hidden; }
 .slide__ava img { width: 100%; height: 100%; object-fit: cover; }
 .slide p { color: var(--white); margin: 15px 0; }
 .slide__name { font-size: 16px; font-weight: 700; color: var(--white); margin: 25px 0 5px; }
 .slide__meta { font-size: 16px; color: rgba(255, 255, 255, .7); }
-.slider__nav { display: flex; justify-content: center; gap: 15px; margin-top: 30px; }
-.slider__btn { width: 50px; height: 50px; border-radius: 50px; background: rgba(255, 255, 255, .2); color: var(--white); position: relative; transition: background-color var(--ui) ease; }
-.slider__btn:hover { background: rgba(255, 255, 255, .35); }
-.slider__btn::after { content: ""; position: absolute; left: 20px; top: 18px; width: 10px; height: 10px; border-right: 2px solid currentColor; border-top: 2px solid currentColor; transform: rotate(45deg); }
-.slider__btn--prev::after { left: 22px; transform: rotate(-135deg); }
+/* Photo slider (Eye Maitri): the same slider on a light ground, each frame opening in the viewer */
+.slider--photo { max-width: none; margin: 0; text-align: left; }
+.slider--photo .slide a { display: block; cursor: zoom-in; border-radius: var(--r-card); }
 
 /* ---------- Consultation card: 1170×442, pulled up −110 ---------- */
 .consult { display: flex; background: var(--white); border-radius: var(--r-card); box-shadow: var(--sh-float); overflow: hidden; position: relative; z-index: 2; }
@@ -419,6 +419,17 @@ textarea.input { height: 120px; max-width: none; resize: vertical; }
 .marquee:hover .marquee__track { animation-play-state: paused; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .marquee__track { animation: none; } .marquee { white-space: normal; } .marquee__track { flex-wrap: wrap; } }
+
+/* Partners: the client's logos, scrolling above the footer on Home */
+.partners .marquee { margin-top: 36px; padding: 22px 0; border-top: 1px solid var(--line-card); border-bottom: 1px solid var(--line-card); }
+.marquee--logos .marquee__track { gap: 28px; padding-right: 28px; animation-duration: 48s; }
+.partners h2 { white-space: nowrap; font-size: clamp(21px, 5.8vw, var(--h2)); line-height: 1.25; }
+.marquee__logo { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; width: 168px; height: 88px; padding: 6px 10px; background: var(--white); border: 1px solid var(--line-card); border-radius: 14px; box-shadow: var(--sh-card); }
+.marquee__logo img { width: 100%; height: 100%; object-fit: contain; }
+@media (max-width: 767px) {
+  .marquee--logos .marquee__track { gap: 18px; padding-right: 18px; }
+  .marquee__logo { width: 136px; height: 72px; padding: 5px 8px; }
+}
 
 /* Preloader: olive screen, EKG draws, slides down after 1.2s (SACH page-start) */
 .loader { position: fixed; inset: 0; z-index: 100; background: var(--rose); display: grid; place-items: center; color: var(--white); }

@@ -2,8 +2,9 @@
 import { trapFocus } from './nav.js';
 
 export function initGallery() {
-  const links = [...document.querySelectorAll('.gallery a')];
-  if (!links.length) return;
+  const all = [...document.querySelectorAll('.gallery a, a.js-lb')];
+  if (!all.length) return;
+  let links = all;   // the set the arrows step through: the clicked link's group, so a slider does not run into the gallery
   const lb = document.createElement('div');
   lb.className = 'lb'; lb.setAttribute('data-lenis-prevent', ''); lb.setAttribute('role', 'dialog'); lb.setAttribute('aria-modal', 'true'); lb.setAttribute('aria-label', 'Photo viewer'); lb.hidden = true;
   lb.innerHTML = `
@@ -36,7 +37,12 @@ export function initGallery() {
   };
   const keys = e => { if (e.key === 'ArrowRight') show(i + 1); if (e.key === 'ArrowLeft') show(i - 1); };
 
-  links.forEach((a, n) => a.addEventListener('click', e => { e.preventDefault(); open(n); }));
+  all.forEach(a => a.addEventListener('click', e => {
+    e.preventDefault();
+    const scope = a.closest('[data-lb-group]');
+    links = scope ? [...scope.querySelectorAll('.gallery a, a.js-lb')] : all.filter(x => !x.closest('[data-lb-group]'));
+    open(links.indexOf(a));
+  }));
   lb.querySelector('.lb__close').addEventListener('click', close);
   lb.querySelector('.lb__prev').addEventListener('click', () => show(i - 1));
   lb.querySelector('.lb__next').addEventListener('click', () => show(i + 1));

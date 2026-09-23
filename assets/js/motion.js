@@ -50,13 +50,26 @@ function initParallax(reduced) {
   });
 }
 
-function initSlider() {
+function initSlider(reduced) {
   document.querySelectorAll('.slider').forEach(s => {
     const slides = [...s.querySelectorAll('.slide')]; if (slides.length < 2) return;
     let i = slides.findIndex(x => x.classList.contains('is-active')); if (i < 0) i = 0;
     const show = n => { slides[i].classList.remove('is-active'); i = (n + slides.length) % slides.length; slides[i].classList.add('is-active'); };
     s.querySelector('.slider__btn--prev')?.addEventListener('click', () => show(i - 1));
     s.querySelector('.slider__btn--next')?.addEventListener('click', () => show(i + 1));
+
+    // data-autoplay="<ms>": advance on its own, and hold while the pointer or keyboard is on it,
+    // while the photo viewer is open over it, or while the tab is in the background.
+    const every = Number(s.dataset.autoplay);
+    if (!every || reduced) return;
+    let timer = null;
+    const tick = () => { if (!document.querySelector('.lb:not([hidden])')) show(i + 1); };
+    const start = () => { if (!timer && !document.hidden) timer = setInterval(tick, every); };
+    const stop = () => { clearInterval(timer); timer = null; };
+    ['pointerenter', 'focusin'].forEach(e => s.addEventListener(e, stop));
+    ['pointerleave', 'focusout'].forEach(e => s.addEventListener(e, start));
+    document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+    start();
   });
 }
 
@@ -111,7 +124,7 @@ function initTimeline(reduced) {
 export function initMotion(reduced) {
   initTimeline(reduced);
   initMarquee();
-  initSlider();
+  initSlider(reduced);
   initAccordions();
   initScrub();
   initParallax(reduced);
