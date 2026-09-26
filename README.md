@@ -15,7 +15,7 @@ about.html          Medic about-us: dotted banner + photo, biography row, philos
                     olive band with Netram's story accordion, states band (interactive India map, stat cards, state chips), gallery cards
 expertise.html      Medic about-us banner + departments + SACH timeline + our-doctors band: 6 specialty cards (accordion), pinned career
                     timeline sliding over an EKG line, Gold Medal list section, academics band, award year cards, press cards, CTA photos
-foundation.html     Medic about-us banner, origin row, 5-figure counter card, interactive India map, 8 project cards, Netram Empower
+foundation.html     Medic about-us banner, origin row, 5-figure counter card, interactive India map, 8 project cards, Eye Maitri
                     list section, field gallery + lightbox, Foundation CTA photos
 contact.html        Medic contact-us: dotted banner, contact chips beside the live Google map, consultation card (full enquiry form), FAQ cards
 404.html            Not-found page (noindex)
@@ -70,7 +70,7 @@ The hero (`hero-1000.webp`) is under the 250KB budget. **Still to replace** when
 
 ## The form endpoint
 
-`assets/js/form.js`, function `sendEnquiry(data)` is a stub that resolves `{ ok: true }` after 600ms and logs the payload. Replace its body with a `fetch` to Web3Forms / Formspree / a PHP mailer (the comment shows both). `data.type` is one of `patient | corporate | foundation | media | other` and should drive the recipient. The honeypot field is `website`. `contact.html?type=corporate#enquiry` pre-selects the enquiry type (the Netram Empower and Foundation links use this).
+`assets/js/form.js`, function `sendEnquiry(data)` is a stub that resolves `{ ok: true }` after 600ms and logs the payload. Replace its body with a `fetch` to Web3Forms / Formspree / a PHP mailer (the comment shows both). `data.type` is one of `patient | corporate | foundation | media | other` and should drive the recipient. The honeypot field is `website`. `contact.html?type=corporate#enquiry` pre-selects the enquiry type (the Eye Maitri and Foundation links use this).
 
 ## Deployment
 
@@ -85,14 +85,14 @@ Upload everything except `tools/`, the PDF, `references/` and the `*.md` files. 
 
 ## Still needed from the client
 
-Photographs (the Drive folders only cover the doctor herself; these sections use the deck's low-resolution crops until better files arrive): the Netram building and clinic interiors; each Foundation project (Roshini, Eye Mela, Chashma Bus, Nayan Hans, Mission 6/6, I Am 6/6, Transgender Medical Camp, Oxygen Sewa, Netram Empower); Netram Empower corporate camps; awards and stage moments (Forbes India, TEDx, BW 40 Under 40, IPCL Gold Medal, CII, IIRSI, HOA); partner logos.
+Photographs (the Drive folders only cover the doctor herself; these sections use the deck's low-resolution crops until better files arrive): the Netram building and clinic interiors; each Foundation project (Roshini, Eye Mela, Chashma Bus, Nayan Hans, Mission 6/6, I Am 6/6, Transgender Medical Camp, Oxygen Sewa, Eye Maitri); Eye Maitri corporate camps; awards and stage moments (Forbes India, TEDx, BW 40 Under 40, IPCL Gold Medal, CII, IIRSI, HOA); partner logos.
 
 Facts that were removed from the pages because they were unconfirmed (nothing is shown until they arrive)
 
 1. Domain in canonical / OG / sitemap / robots.
 2. Clinic timings; whether consultations are only at E-98 Greater Kailash-2 or also at Netram, C.R. Park.
 3. Emergency contact; what a patient should bring.
-4. Netram Empower (formerly Eye Maitri, renamed by the client 26 Sep 2026): coverage, formats and pricing; its canonical URL.
+4. Eye Maitri (corporate eye wellness): coverage, formats and pricing; its canonical URL. Netram Empower is the separate 12th-pass employability programme (Foundation page).
 5. The seven states beyond the seventeen named.
 6. MAMC senior residency year; year and conferring body of the IPCL Gold Medal; Future Female Forward Award year; the FVEIRC expansion.
 7. Full procedure list per specialty.
