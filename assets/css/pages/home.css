@@ -111,7 +111,7 @@
 .band .ekg--divider { max-width: 700px; margin: 0 auto 10px; }
 
 
-.consult-section { padding-bottom: var(--sec); }
+.consult-section { padding-top: var(--sec); padding-bottom: var(--sec); }
 
 @media (max-width: 991px) {
   .about-row { flex-direction: column-reverse; }
