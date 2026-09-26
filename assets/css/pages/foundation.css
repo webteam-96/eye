@@ -61,3 +61,6 @@
   .stats--5 > div:last-child { border-bottom: 0; }
   .gallery { columns: 1; }
 }
+/* CTA button on the new happy orange: ink text (white fails contrast) */
+.cta-photos__box .btn--amber { color: var(--ink); }
+.cta-photos__box .btn--amber:hover { color: var(--white); }

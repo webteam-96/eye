@@ -62,6 +62,12 @@ SOURCES = {
     # client's clinic photographs, 19 Sep 2026 (WhatsApp batch; originals/ )
     "dr-cornea-2":   ("originals/corneal condition .png",             (0, 0, 1, 1), 3/2, "A", (480, 800)),
     "dr-glaucoma-2": ("originals/Glaucoma.jpg",                       (0, 0, 1, 1), 3/2, "A", W3),
+    # netrameyefoundation.com treatment photos for the Home "What I treat" tiles (client, 26 Sep 2026)
+    "netram-refractive": ("originals/netram-refractive.png", (.06, 0, 1, 1), 3/2, "A", W3),
+    "netram-cataract":   ("originals/netram-cataract.png",   (0, 0, .94, .9),   3/2, "A", W3),
+    "netram-glaucoma":   ("originals/netram-glaucoma.png",   (0, 0, .94, .9),   3/2, "A", W3),
+    "netram-dry-eye":    ("originals/netram-dry-eye.png",    (0, 0, 1, 1),   3/2, "A", (480,)),
+    "hero-bg-surgeon":   ("originals/hero-bg-surgeon.webp",  (0, 0, 1, 1),   1920/1234, "A", (800, 1440, 1920)),   # Home hero background (client, 26 Sep 2026)
     "dr-hero-saree": ("originals/hero-saree-portrait.png",           (0, 0, 1, 1), 10/13, "A", (480, 800, 1000)),
     "dr-child-exam": ("originals/Children and refractive error.jpg",  (0, 0, 1, 1), 3/2, "A", W3),
 }

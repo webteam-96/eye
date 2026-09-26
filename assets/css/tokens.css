@@ -1,20 +1,30 @@
 /* Tokens — the Medic 128 system (measured), recoloured from the Netram logo.
-   Medic teal → lavender with the carnation pink as accent (client, 18 Sep 2026), Medic navy → near-black, Medic pink → saree gold, pink wash → blush. */
+   Palette (client, 26 Sep 2026): lavender page ground #E6E6FA, lavender-purple brand, and the client's "happy colours"
+   (orange, yellow, aqua, lilac, mint) as accents. Happy colours are light: they always carry --ink text/icons, never white. */
 :root {
   /* colour */
-  --ink: #383434;                 /* headings, footer ground  (Medic #223645) */
-  --grey: #707070;                /* paragraphs               (Medic #707070) */
+  --ink: #383434;                 /* headings, footer ground  (Medic #223645); 10:1 on --ground */
+  --grey: #5A5566;                /* paragraphs: purple-grey, 5.8:1 on --ground, 7.2:1 on white */
   --link: #222222;                /* nav links                (Medic #222222) */
-  --rose: #5E4B9E;                 /* brand: lavender (Medic teal #36807F); 7.1:1 on white */
-  --rose-tint: rgba(94, 75, 158, .14);
-  --rose-light: #F1EEFA;           /* button hover text on lavender */
-  --plum: #3F3272;                 /* deep block: deep lavender (Medic #083A3A); 11:1 with white */
-  --amber: #D6246E;                /* accent: the carnation pink from the client's photo; white text on it (4.8:1), never ink */
-  --gold: #F3D27A;                 /* light saree gold for lines and headings on the lavender bands (4.8:1) */
-  --amber-text: #A8175A;               /* dark pink for small icons and tags on white (6.1:1) */
-  --paper: #F6F4FB;               /* lavender wash              (Medic pink wash) */
+  --rose: #6F52A0;                /* brand: lavender purple; white text on it 6.2:1, as text on --ground 5.0:1 */
+  --rose-tint: rgba(111, 82, 160, .14);
+  --rose-light: #F1EEFA;          /* button hover text on lavender */
+  --plum: #4F3A80;                /* deep block: deep lavender; 9.3:1 with white */
+  --amber: #FF9A54;               /* accent: happy orange; --ink on it 5.9:1 — never white text (2.1:1) */
+  --gold: #FFEA6B;                /* happy yellow for lines and headings on the lavender bands (5.1:1 on --rose) */
+  --amber-text: #A04608;          /* deep orange for small icons and tags on white (6.2:1) and on --ground (5.1:1) */
+  --paper: #F4F3FD;               /* light lavender wash for panels inside white cards */
   --white: #FFFFFF;
-  --ground: #FAF6EE;              /* page ground: warm ivory in place of white (client, 19 Sep 2026); --grey body text on it 4.6:1, AA */
+  --ground: #E6E6FA;              /* page ground: lavender (client's colour, 26 Sep 2026) */
+
+  /* happy colours (client, 26 Sep 2026) — fills for chips, rings, icons, cards; pair with --ink */
+  --happy-orange: #FF9A54;
+  --happy-yellow: #FFEA6B;
+  --happy-aqua: #54FEFB;
+  --happy-lilac: #E7B2FF;
+  --happy-mint: #89FFCB;
+  --amber-tint: rgba(255, 154, 84, .25);   /* soft orange glow (map pin ring) */
+  --wash: #F1E7FD;                /* the big decorative circle: a soft lilac highlight on the lavender ground */
   --line-nav: rgba(0, 0, 0, .2);
   --line-row: rgba(56, 52, 52, .2);
   --line-input: #CCCCCC;
@@ -48,7 +58,8 @@
   /* shadows — Medic has three */
   --sh-card: 0 0 20px -1px rgba(0, 0, 0, .1);
   --sh-float: 0 20px 40px rgba(0, 0, 0, .1);
-  --sh-btn: 0 5px 30px rgba(94, 75, 158, .3);
+  --sh-btn: 0 5px 30px rgba(111, 82, 160, .3);
+  --sh-amber: 0 5px 30px rgba(255, 154, 84, .35);
 
   /* motion — Save a Child's Heart recipes */
   --ease-sach: cubic-bezier(0, 0, 0, 1);       /* their (0,.003,0,1.003): instant start, long settle */

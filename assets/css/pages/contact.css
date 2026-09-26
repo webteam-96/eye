@@ -5,7 +5,11 @@
 .contact-chips { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
 .chip { display: flex; align-items: center; gap: 14px; padding: 14px 22px 14px 14px; background: var(--white); border-radius: 50px; box-shadow: var(--sh-card); color: var(--ink); text-align: left; transition: transform var(--ui) ease, box-shadow var(--ui) ease; }
 .chip:hover { transform: translateY(-4px); box-shadow: var(--sh-float); }
-.chip__icon { flex: 0 0 48px; width: 48px; height: 48px; border-radius: 50%; background: var(--rose); color: var(--white); display: grid; place-items: center; }
+.chip__icon { flex: 0 0 48px; width: 48px; height: 48px; border-radius: 50%; background: var(--happy-orange); color: var(--ink); display: grid; place-items: center; }
+/* happy discs with ink icons, in the same order as the footer: visit orange, call aqua, WhatsApp mint, email lilac */
+.contact-chips > .chip:nth-of-type(4n+2) .chip__icon { background: var(--happy-aqua); }
+.contact-chips > .chip:nth-of-type(4n+3) .chip__icon { background: var(--happy-mint); }
+.contact-chips > .chip:nth-of-type(4n+4) .chip__icon { background: var(--happy-lilac); }
 .chip__icon .ico { width: 22px; height: 22px; }
 .chip__text { font-size: 15px; line-height: 20px; font-weight: 500; }
 .chip__text strong { display: block; font-size: 12px; line-height: 16px; letter-spacing: .5px; text-transform: uppercase; color: var(--rose); }

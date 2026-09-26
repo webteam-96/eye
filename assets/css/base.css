@@ -42,7 +42,7 @@ a { color: inherit; text-decoration: none; transition: color var(--ui) ease; }
 .section--top { padding-top: var(--sec); }
 .section--band { padding: var(--sec-band-top) 0 var(--sec-band-bottom); background: var(--rose); color: var(--white); }
 .section--band p, .section--band h2, .section--band h3 { color: var(--white); }
-.section--light { background: #F4F3EE; padding: var(--sec) 0; }
+.section--light { background: var(--paper); padding: var(--sec) 0; }
 .on-olive { background: var(--rose); color: var(--white); }
 .on-ink { background: var(--ink); color: var(--white); }
 .row { display: flex; align-items: center; gap: 30px; }

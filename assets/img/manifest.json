@@ -346,5 +346,52 @@
   "aspect": 0.7692307692307693,
   "src_w": 2000,
   "tier": "A"
+ },
+ "netram-refractive": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "aspect": 1.5,
+  "src_w": 1350,
+  "tier": "A"
+ },
+ "netram-cataract": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "aspect": 1.5,
+  "src_w": 2273,
+  "tier": "A"
+ },
+ "netram-glaucoma": {
+  "widths": [
+   480,
+   800
+  ],
+  "aspect": 1.5,
+  "src_w": 1137,
+  "tier": "A"
+ },
+ "netram-dry-eye": {
+  "widths": [
+   415
+  ],
+  "aspect": 1.5,
+  "src_w": 415,
+  "tier": "A"
+ },
+ "hero-bg-surgeon": {
+  "widths": [
+   800,
+   1440,
+   1920
+  ],
+  "aspect": 1.5559157212317667,
+  "src_w": 1920,
+  "tier": "A"
  }
 }
