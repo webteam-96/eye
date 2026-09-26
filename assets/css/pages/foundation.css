@@ -30,7 +30,7 @@
 /* Project Garima: a lavender ground and a rule-and-number figure, so the three programme
    blocks on this page do not read as three copies of the same layout. */
 .section--paper { background: var(--paper); }
-#garima, #maitri { padding-top: var(--sec); }
+#garima, #empower { padding-top: var(--sec); }
 #garima .maitri__text { flex: 0 0 480px; max-width: 480px; }
 .figure { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 16px; max-width: 420px; margin: 26px 0 0; padding-top: 16px; border-top: 2px solid var(--amber); }
 .figure__num { font-size: 46px; line-height: 1.05; font-weight: 700; color: var(--rose); }

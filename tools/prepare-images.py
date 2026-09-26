@@ -62,6 +62,7 @@ SOURCES = {
     # client's clinic photographs, 19 Sep 2026 (WhatsApp batch; originals/ )
     "dr-cornea-2":   ("originals/corneal condition .png",             (0, 0, 1, 1), 3/2, "A", (480, 800)),
     "dr-glaucoma-2": ("originals/Glaucoma.jpg",                       (0, 0, 1, 1), 3/2, "A", W3),
+    "dr-hero-saree": ("originals/hero-saree-portrait.png",           (0, 0, 1, 1), 10/13, "A", (480, 800, 1000)),
     "dr-child-exam": ("originals/Children and refractive error.jpg",  (0, 0, 1, 1), 3/2, "A", W3),
 }
 

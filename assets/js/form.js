@@ -68,7 +68,7 @@ export function initForm() {
         msg.textContent = 'Thank you. We have your enquiry and will call or write back within one working day.';
         msg.classList.add('is-ok');
       } else {
-        msg.textContent = 'The message could not be sent. Please call 011-41676655 or WhatsApp 92126 46655.';
+        msg.textContent = 'The message could not be sent. Please call 011-41676655 or WhatsApp 93199 09455.';
         msg.classList.add('is-err');
       }
       msg.focus();
