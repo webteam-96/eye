@@ -247,3 +247,7 @@ html.vt-open { overflow: hidden; }
 @media (max-width: 600px) { .slider--big .slide__cap { width: calc(100% - 24px); margin-top: -30px; padding: 18px 18px 20px; } .slider--big .slide__name { font-size: 18px; line-height: 24px; } .slider--big .slide__cap p { font-size: 15px; line-height: 23px; } }
 /* responsive: the dot pattern beside the right-hand service photo stays inside the page on 992–1239px screens */
 @media (max-width: 1239px) { .service__img .dots { right: 0; } }
+.vt-modal__frame video { width: 100%; height: 100%; display: block; object-fit: contain; background: #000; }
+.vt-modal.is-loading .vt-modal__frame::after { content: ""; position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; border: 4px solid rgba(255, 255, 255, .25); border-top-color: var(--gold); animation: vt-spin .8s linear infinite; pointer-events: none; }
+.vt-modal__frame { position: relative; }
+@keyframes vt-spin { to { transform: rotate(360deg); } }
