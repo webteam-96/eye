@@ -225,3 +225,14 @@
 .vt-arrow--prev::after { transform: translate(-35%, -50%) rotate(-135deg); }
 .vt-arrow:hover { background: var(--gold); border-color: var(--gold); }
 .vt-arrow:hover::after { border-color: var(--ink); }
+/* testimonial popup player */
+.vt-modal { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; padding: 24px; background: rgba(28, 20, 56, .88); backdrop-filter: blur(4px); }
+.vt-modal[hidden] { display: none; }
+.vt-modal__box { position: relative; height: min(86vh, 820px); aspect-ratio: 9 / 16; max-width: 100%; }
+.vt-modal__frame { width: 100%; height: 100%; border-radius: 18px; overflow: hidden; background: #000; box-shadow: 0 30px 80px rgba(0, 0, 0, .5); }
+.vt-modal__frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+.vt-modal__close { position: absolute; top: -14px; right: -14px; z-index: 1; width: 44px; height: 44px; border-radius: 50%; background: var(--gold); cursor: pointer; box-shadow: 0 6px 18px rgba(0, 0, 0, .35); }
+.vt-modal__close::before, .vt-modal__close::after { content: ""; position: absolute; left: 13px; top: 21px; width: 18px; height: 2px; background: var(--ink); transform: rotate(45deg); }
+.vt-modal__close::after { transform: rotate(-45deg); }
+html.vt-open { overflow: hidden; }
+@media (max-width: 600px) { .vt-modal__box { height: auto; width: 100%; } .vt-modal__close { top: -52px; right: 0; } }

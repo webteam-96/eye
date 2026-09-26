@@ -322,12 +322,25 @@
     const step = () => (row.querySelector('.vt')?.offsetWidth || 240) + 20;
     document.querySelector('[data-vt-prev]')?.addEventListener('click', () => row.scrollBy({ left: -step() * 2, behavior: 'smooth' }));
     document.querySelector('[data-vt-next]')?.addEventListener('click', () => row.scrollBy({ left: step() * 2, behavior: 'smooth' }));
+    // popup player: the Drive player (with its own controls) in a modal; Esc, the close button or the backdrop closes it
+    const modal = document.createElement('div');
+    modal.className = 'vt-modal'; modal.hidden = true;
+    modal.setAttribute('role', 'dialog'); modal.setAttribute('aria-modal', 'true'); modal.setAttribute('aria-label', 'Patient testimonial video');
+    modal.innerHTML = '<div class="vt-modal__box"><button class="vt-modal__close" type="button" aria-label="Close video"></button><div class="vt-modal__frame"></div></div>';
+    document.body.appendChild(modal);
+    const frame = modal.querySelector('.vt-modal__frame'), closeBtn = modal.querySelector('.vt-modal__close');
+    let opener = null;
+    const close = () => { modal.hidden = true; frame.innerHTML = ''; document.documentElement.classList.remove('vt-open'); opener?.focus(); };
     document.querySelectorAll('.vt__btn').forEach(b => b.addEventListener('click', () => {
+      opener = b;
       const f = document.createElement('iframe');
       f.src = 'https://drive.google.com/file/d/' + b.dataset.drive + '/preview';
       f.title = b.getAttribute('aria-label'); f.allow = 'autoplay; fullscreen'; f.allowFullscreen = true;
-      b.replaceWith(f);
+      frame.appendChild(f); modal.hidden = false; document.documentElement.classList.add('vt-open'); closeBtn.focus();
     }));
+    closeBtn.addEventListener('click', close);
+    modal.addEventListener('click', e => { if (e.target === modal) close(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) close(); });
   </script>
 
   <section class="section consult-section">
