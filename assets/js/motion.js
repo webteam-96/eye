@@ -12,10 +12,21 @@ function observe(selector, onEnter, threshold = 0) {
 }
 
 // Reveals wait for the preloader (SACH: hero text enters 2.3s after page start, i.e. after the loader).
+// thin scroll-progress line at the top of the page
+function initProgress() {
+  const bar = document.createElement('div'); bar.className = 'scroll-progress'; bar.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(bar);
+  let raf = 0;
+  const tick = () => { raf = 0; const h = document.documentElement.scrollHeight - innerHeight; bar.style.transform = `scaleX(${h > 0 ? Math.min(1, scrollY / h) : 0})`; };
+  addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(tick); }, { passive: true });
+  addEventListener('resize', tick); tick();
+}
+
 export function startHero() {
   io = observe('.rv', el => el.classList.add('is-in'));
   observe('.ekg:not(.ekg--scrub)', el => el.classList.add('is-in'));
   observe('.bars', el => el.classList.add('is-in'), 0.3);
+  initProgress();
 }
 
 function initScrub() {

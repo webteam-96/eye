@@ -71,3 +71,7 @@
 @media (max-width: 991px) {
   :root { --h1: 50px; --h1-lh: 60px; --h2: 40px; --h2-lh: 52px; --sec: 60px; --sec-band-top: 60px; --sec-band-bottom: 130px; --footer-top: 60px; }
 }
+/* the smallest phones (≤380px): a step down in heading size so long words fit */
+@media (max-width: 380px) {
+  :root { --h1: 40px; --h1-lh: 48px; --h2: 32px; --h2-lh: 40px; }
+}

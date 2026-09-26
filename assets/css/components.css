@@ -607,3 +607,40 @@ p a, li a { padding-block: 4px; }
 .mapwrap.is-in path:nth-of-type(n+24) { transition-delay: 500ms; }
 .mapwrap.is-in path:hover { fill: var(--amber); transition-delay: 0s; }
 @media (max-width: 991px) { .mapwrap { max-width: none; width: 100%; } }
+
+/* ---------- Motion polish (client, 27 Sep 2026): softer reveals, photos that settle, button shine, card lift, scroll progress.
+   Everything here is motion-only and switches off under prefers-reduced-motion. ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .js .rv { transform: translateY(40px); filter: blur(4px); }
+  .js .rv--fade { transform: none; }
+  .js .rv.is-in { filter: none; transition: transform var(--rv-move) var(--ease-sach), opacity var(--rv-fade) ease, filter 900ms ease; }
+  .js .rv.is-in[data-d="1"] { transition-delay: 300ms; }
+  .js .rv.is-in[data-d="2"] { transition-delay: 600ms; }
+  .js .rv.is-in[data-d="3"] { transition-delay: 900ms; }
+  /* photos settle from a slight zoom as their block reveals (released afterwards, so hover zooms still work) */
+  @keyframes img-settle { from { transform: scale(1.08); } }
+  /* only photos inside frames that clip, so the zoom never pokes past the page edge */
+  .js .rv.is-in :is(.frame, .dept__img, .team-card__img, .trust-card__img, .mc__img, .hero__photo-frame, .consult__img) img,
+  .js .rv.is-in:is(.tile, .dept, .team-card, .trust-card) img { animation: img-settle 1.6s var(--ease-sach) backwards; }
+  .js .rv.is-in[data-d="1"] img { animation-delay: 300ms; }
+  .js .rv.is-in[data-d="2"] img { animation-delay: 600ms; }
+  .js .rv.is-in[data-d="3"] img { animation-delay: 900ms; }
+  /* button shine */
+  .btn { overflow: hidden; isolation: isolate; }
+  .btn::after { content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: -70%; width: 45%; background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .38), transparent); transform: skewX(-20deg); transition: left .75s ease; pointer-events: none; }
+  .btn:hover::after { left: 135%; }
+  /* card lift (uses `translate`, separate from the reveal's `transform`) */
+  .dept, .step, .team-card, .feature, .ab-point, .emp__card { transition: translate .45s var(--ease-out), box-shadow .45s ease; }
+  .dept:hover, .team-card:hover, .feature:hover, .ab-point:hover { translate: 0 -6px; }
+  .step:hover { translate: 0 -6px; }
+}
+.scroll-progress { position: fixed; z-index: 90; left: 0; top: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--rose), var(--amber)); transform-origin: 0 50%; transform: scaleX(0); pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .scroll-progress { display: none; } }
+
+/* Responsive fixes (27 Sep 2026 audit, 320–1920px): long emails and addresses may wrap in the footer; decoration never pushes the page wider */
+.footer__col { min-width: 0; }
+.footer__col a span, .footer__col span { overflow-wrap: anywhere; }
+/* very small phones: long button labels wrap instead of overflowing */
+@media (max-width: 380px) { .btn { white-space: normal; padding-left: 26px; } }
+/* very small phones: a long single word in a heading may break rather than push the page wider */
+@media (max-width: 380px) { h1, h2 { overflow-wrap: break-word; } }

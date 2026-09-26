@@ -382,3 +382,5 @@ a.ab-award__img { cursor: zoom-in; }
 .mc__img--page img { width: 100%; height: 100%; object-fit: contain; box-shadow: 0 10px 24px rgba(0, 0, 0, .18); }
 .mc:hover .mc__img--page img { transform: scale(1.03); }
 .mc__zoom { position: absolute; right: 14px; bottom: 14px; padding: 5px 12px; border-radius: 20px; background: var(--ink); color: var(--white); font-size: 12px; font-weight: 700; opacity: .85; }
+/* responsive: breadcrumb links are comfortable tap targets */
+.ab-crumb a { display: inline-block; padding: 4px 0; }
