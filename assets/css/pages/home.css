@@ -188,13 +188,4 @@
 @media (prefers-reduced-motion: reduce) { .slider--big .slide, .slider--big .slide.is-active { transform: none; transition: none; } }
 @media (max-width: 991px) { .slider--big .slide__photo { margin-top: 0; border-radius: var(--r-card); } }
 
-/* Hero background: the surgical close-up (client, 26 Sep 2026) under a deep-lavender wash; layout unchanged */
-.hero--photo { background: linear-gradient(90deg, rgba(55, 38, 92, .94) 0%, rgba(79, 58, 128, .84) 40%, rgba(79, 58, 128, .5) 68%, rgba(79, 58, 128, .3) 100%), url("../../img/hero-bg-surgeon-1440.jpg") 72% 30% / cover no-repeat; }
-.hero--photo .hero__title { color: var(--white); }
-.hero--photo .hero__sub { color: var(--gold); }
-.hero--photo .hero__text p { color: rgba(255, 255, 255, .92); }
-@media (min-width: 1600px) { .hero--photo { background-image: linear-gradient(90deg, rgba(55, 38, 92, .94) 0%, rgba(79, 58, 128, .84) 40%, rgba(79, 58, 128, .5) 68%, rgba(79, 58, 128, .3) 100%), url("../../img/hero-bg-surgeon-1920.jpg"); } }
-@media (max-width: 991px) { .hero--photo { background: linear-gradient(180deg, rgba(79, 58, 128, .3) 0%, rgba(79, 58, 128, .45) 42%, rgba(55, 38, 92, .92) 64%), url("../../img/hero-bg-surgeon-1440.jpg") 55% 0 / cover no-repeat; } }
 .slider--big .slide__meta { color: var(--white); }
-/* the photo hero no longer lends its bottom padding to the section below: give that gap back on the page ground */
-.hero--photo + .wash > .section:first-child { padding-top: var(--sec); }
