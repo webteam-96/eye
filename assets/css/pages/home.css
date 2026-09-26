@@ -189,3 +189,15 @@
 @media (max-width: 991px) { .slider--big .slide__photo { margin-top: 0; border-radius: var(--r-card); } }
 
 .slider--big .slide__meta { color: var(--white); }
+
+/* Testimonials (client, 26 Sep 2026): a swipeable row of portrait video cards; tapping one swaps in the Drive player */
+.testimonials__head { text-align: center; margin-bottom: 40px; }
+.vt-row { display: grid; grid-auto-flow: column; grid-auto-columns: 240px; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 0 18px; margin: 0; list-style: none; scrollbar-width: thin; }
+.vt { scroll-snap-align: start; aspect-ratio: 9 / 16; border-radius: var(--r-block); overflow: hidden; background: var(--plum); box-shadow: var(--sh-card); }
+.vt__btn { position: relative; display: block; width: 100%; height: 100%; padding: 0; border: 0; cursor: pointer; }
+.vt__btn img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.vt__btn:hover img { transform: scale(1.05); }
+.vt__play { position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%; background: var(--amber); box-shadow: 0 8px 24px rgba(0, 0, 0, .25); }
+.vt__play::after { content: ""; position: absolute; left: 26px; top: 21px; border-style: solid; border-width: 11px 0 11px 17px; border-color: transparent transparent transparent var(--ink); }
+.vt iframe { width: 100%; height: 100%; border: 0; display: block; }
+@media (max-width: 991px) { .vt-row { grid-auto-columns: 70vw; } }
