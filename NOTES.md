@@ -34,6 +34,16 @@ Running log: decisions made, things tried and rejected, and what the client stil
 - **Footer** is three columns: brand, Quick links (amber chevrons), Contact (map, phone, WhatsApp, mail, globe icons).
 - **Responsive.** New 992–1199 layer: Medic's fixed pixel columns become percentages, the navbar tightens (the Home link had pushed it past 1024), the blocks grid is fluid, image grids use `minmax(0, 1fr)` so an `<img width>` attribute can never widen a track (that was the Foundation overflow), the CTA box is a flex column with a smaller button below 1200. Verified with `scratchpad/realuser.js` at 360 / 390 / 768 / 1024 / 1280 / 1440 / 1920 on all six pages: no horizontal overflow, no cover-cropped images, plus the real-user pass (phone menu open/Escape, one-open accordion, slider, form validation, FAB, timeline swipe, show-all awards, lightbox open/Escape, live map), 0 console errors.
 
+## Pass 10 — Home: hero, Netram story, Recognition (28 Sep 2026)
+
+The hero uses the client's retouched portrait (`hero-achal.png`, 480x624, exactly the frame's 10:13); it is the same
+photograph as the old `dr-hero-saree`, which went to 1000px, so this one is soft on high-density screens until a
+full-size original arrives. The Netram story shows one photograph, the CH.J.S.B building (`netram-hospital.png`,
+3:4), in `.photos--solo`; the building's banner reads "Netram coming soon" while the heading says Netram now has
+hospitals. The Recognition band lost its background photograph and dot texture and is plain lavender; its slides
+span the full container at 16:9 (3:2 on phones). The BW Healthcare and IPCL slides are soft at 1170px because their
+sources are about 800px; edge-to-edge would soften all five, so the slider stops at the container width.
+
 ## Pass 9 — the client's own project and award photographs (23 Sep 2026)
 
 42 files from the Drive folder "Dr. Anchal Website Images" (originals/client, gitignored). `tools/prepare-client.py`

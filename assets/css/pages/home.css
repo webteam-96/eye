@@ -7,6 +7,11 @@
 .photos__b { position: absolute; left: 0; bottom: 0; z-index: 1; width: 312px; aspect-ratio: 4 / 5; border-radius: var(--r-card); overflow: hidden; box-shadow: var(--sh-float); }
 .photos img { width: 100%; height: 100%; object-fit: cover; }
 .photos .dots { right: 60px; bottom: -20px; }
+/* Netram story with a single photograph: the hospital building, portrait, right of the text */
+.photos--solo { height: auto; display: flex; justify-content: flex-end; }
+.photos__solo { position: relative; z-index: 1; width: 420px; max-width: 100%; aspect-ratio: 3 / 4; border-radius: var(--r-card); overflow: hidden; box-shadow: var(--sh-float); }
+.photos__solo img { width: 100%; height: 100%; object-fit: cover; }
+.photos--solo .dots { right: auto; left: 10px; bottom: -20px; }
 
 /* Senior eye surgeon: four cards */
 .step-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 30px; margin-top: 60px; }
@@ -181,6 +186,10 @@
 
 /* Recognition: big-photo carousel (client, 26 Sep 2026) — same slider and autoplay, a large photo in place of the small avatar */
 .slider--big { max-width: 820px; }
+/* Recognition: a plain lavender band, the photographs across the full container width */
+.recognition-band .slider--big { max-width: none; }
+.recognition-band .slider--big .slide__photo { aspect-ratio: 16 / 9; }
+@media (max-width: 767px) { .recognition-band .slider--big .slide__photo { aspect-ratio: 3 / 2; } }
 .slider--big .slide__photo { aspect-ratio: 3 / 2; margin: 10px 0 26px; border-radius: var(--r-block); overflow: hidden; background: var(--plum); box-shadow: 0 24px 50px rgba(0, 0, 0, .28); }
 .slider--big .slide__photo img { width: 100%; height: 100%; object-fit: cover; }
 .slider--big .slide { transform: translateX(48px); transition: opacity .6s ease, transform .9s var(--ease-out), visibility 0s linear .6s; }

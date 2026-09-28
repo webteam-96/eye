@@ -37,6 +37,8 @@ JOBS = [
     ("womens-era",         "womens-era.png",                          None, 0.50, (480, 900, 1400, 2000), True),
     ("ot-microscope",      "ot-4.jpg",                                None, 0.50, (480, 800),        True),
     ("ot-laser",           "ot-3.jpg",                                None, 0.50, (480,),            True),
+    ("dr-hero-achal",      "hero-achal.png",                          None, 0.50, (480,),            True),
+    ("netram-hospital",    "netram-hospital.png",                     0.75, 0.50, (480, 800, 1080),  True),
     ("hoa",                "ipcl-gold-medal.jpg",                     2.0,  0.50, (480, 800, 960),   False),
     ("dr-recognition-bg",  "future-female.jpg",                       2.045, 0.40, (480, 800, 1440, 2400), False),
 ]
