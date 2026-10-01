@@ -68,6 +68,12 @@ function initSlider(reduced) {
     const show = n => { slides[i].classList.remove('is-active'); i = (n + slides.length) % slides.length; slides[i].classList.add('is-active'); };
     s.querySelector('.slider__btn--prev')?.addEventListener('click', () => show(i - 1));
     s.querySelector('.slider__btn--next')?.addEventListener('click', () => show(i + 1));
+    // a slider with arrows also answers to a swipe
+    if (s.querySelector('.slider__btn')) {
+      let x0 = null;
+      s.addEventListener('pointerdown', e => { x0 = e.clientX; });
+      s.addEventListener('pointerup', e => { if (x0 === null) return; const dx = e.clientX - x0; x0 = null; if (Math.abs(dx) > 40) show(dx < 0 ? i + 1 : i - 1); });
+    }
 
     // data-autoplay="<ms>": advance on its own, and hold while the pointer or keyboard is on it,
     // while the photo viewer is open over it, or while the tab is in the background.

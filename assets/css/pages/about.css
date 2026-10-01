@@ -384,3 +384,8 @@ a.ab-award__img { cursor: zoom-in; }
 .mc__zoom { position: absolute; right: 14px; bottom: 14px; padding: 5px 12px; border-radius: 20px; background: var(--ink); color: var(--white); font-size: 12px; font-weight: 700; opacity: .85; }
 /* responsive: breadcrumb links are comfortable tap targets */
 .ab-crumb a { display: inline-block; padding: 4px 0; }
+/* Leader photo is landscape: the frame follows it so the nameplate and laptop stay in view */
+.ab-lead__frame--wide { aspect-ratio: 3 / 2; }
+/* on the landscape Leader photo the tag would cover her face; it sits on the photo's top edge instead */
+.ab-lead__img:has(.ab-lead__frame--wide) .ab-lead__tag { top: -18px; right: -12px; }
+@media (max-width: 991px) { .ab-lead__img:has(.ab-lead__frame--wide) .ab-lead__tag { top: -16px; right: 8px; } }

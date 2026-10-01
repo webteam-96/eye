@@ -236,7 +236,7 @@
 .slide p { color: var(--white); margin: 15px 0; }
 .slide__name { font-size: 16px; font-weight: 700; color: var(--white); margin: 25px 0 5px; }
 .slide__meta { font-size: 16px; color: rgba(255, 255, 255, .7); }
-/* Photo slider (Eye Maitri): the same slider on a light ground, each frame opening in the viewer */
+/* Photo slider (Foundation features): the same slider on a light ground, each frame opening in the viewer */
 .slider--photo { max-width: none; margin: 0; text-align: left; }
 .slider--photo .slide a { display: block; cursor: zoom-in; border-radius: var(--r-card); }
 
@@ -551,8 +551,8 @@ p a, li a { padding-block: 4px; }
   .hero__photo-frame { width: 100%; max-width: 400px; }
   .hero__title { font-size: 42px; line-height: 50px; }
   .hero__card { right: 0; }
-  .about-row__text, .reach-row__text, .maitri__text, .gold__text, .reach__text, .maprow__text, .band-row__text { flex: 0 0 50%; max-width: 50%; }
-  .about-row__img, .maitri__img, .gold__img, .mapbox, .band-row__img, .wf__img { flex: 1 1 auto; min-width: 0; }
+  .about-row__text, .reach-row__text, .prog__text, .gold__text, .reach__text, .maprow__text, .band-row__text { flex: 0 0 50%; max-width: 50%; }
+  .about-row__img, .prog__img, .gold__img, .mapbox, .band-row__img, .wf__img { flex: 1 1 auto; min-width: 0; }
   .band-row__img { flex: 0 0 40%; }
   .wf__img { flex: 0 0 45%; }
   .consult__img { flex: 0 0 38%; }

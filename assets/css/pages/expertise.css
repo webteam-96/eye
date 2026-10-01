@@ -176,8 +176,9 @@ a.press:hover .press__link .btn__icon { transform: translateX(6px); }
 /* My journey (client, 26 Sep 2026): the original timeline colours, with the surgical close-up behind the pinned panel */
 .tl { background: #3F3272; }
 .tl__sticky { background: linear-gradient(180deg, rgba(63, 50, 114, .78) 0%, rgba(63, 50, 114, .6) 50%, rgba(63, 50, 114, .85) 100%), url("../../img/hero-bg-surgeon-1440.jpg") center 30% / cover no-repeat; }
+@media (max-width: 991px) { .tl__sticky { background-image: linear-gradient(180deg, rgba(63, 50, 114, .75), rgba(63, 50, 114, .85)), url("../../img/hero-bg-surgeon-800.jpg"); } }
 .tl-line path { stroke: #F3D27A; }
 .tl-item .todo { color: #F3D27A; }
 .tl__pin { background: #D6246E; box-shadow: 0 0 0 6px rgba(212, 145, 46, .25); }
 .tl__pin::before, .tl__pin::after { border-color: #D6246E; }
-@media (max-width: 991px) { .tl__sticky { background-image: linear-gradient(180deg, rgba(63, 50, 114, .75), rgba(63, 50, 114, .85)), url("../../img/hero-bg-surgeon-800.jpg"); } }
+

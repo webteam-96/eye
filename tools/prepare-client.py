@@ -19,8 +19,6 @@ JOBS = [
     ("medgate",            "medgate.png",                             1.45, 0.30, (480, 800),        False),
     ("transgender",        "transgender.jpg",                         1.5,  0.00, (480, 800),        True),
     ("chashma-bus",        "chashma-bus.jpg",                         1.5,  0.50, (464,),            True),
-    ("eye-maitri",         "eye-maitri-2.png",                        1.5,  0.50, (480, 800, 1200),  True),
-    ("eye-maitri-b",       "eye-maitri.png",                          1.5,  0.50, (480, 800, 1200),  True),
     ("cii",                "cii-healthcare-summit-panel-2025.jpg",    0.898, 0.60, (480, 800, 1200),  False),
     ("gandhi-samman",      "mahatma-gandhi-samman-bangkok-2017.jpg",  None, 0.50, (480, 800, 960),   False),
     ("bw40",               "40-under-40.jpg",                         0.9,  0.46, (480, 800),        False),
@@ -39,6 +37,8 @@ JOBS = [
     ("ot-laser",           "ot-3.jpg",                                None, 0.50, (480,),            True),
     ("dr-hero-achal",      "hero-achal.png",                          None, 0.50, (480,),            True),
     ("netram-hospital",    "netram-hospital.png",                     0.75, 0.50, (480, 800, 1080),  True),
+    ("slitlamp-patient",   "slitlamp-patient.jpg",                    None, 0.50, (480, 800),        True),
+    ("slitlamp-wide",      "slitlamp-patient.jpg",                    1.6,  0.42, (480, 800),        True),
     ("hoa",                "ipcl-gold-medal.jpg",                     2.0,  0.50, (480, 800, 960),   False),
     ("dr-recognition-bg",  "future-female.jpg",                       2.045, 0.40, (480, 800, 1440, 2400), False),
 ]
